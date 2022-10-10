@@ -19,7 +19,7 @@ const baseConfig = defineConfig({
 // 入口文件
 const entryFile = path.resolve(__dirname, './entry.ts')
 // 组件目录
-const componentsDir = path.resolve(__dirname, '../packages/components')
+const componentsDir = path.resolve(__dirname, '../packages/soda')
 // 输出目录
 const outputDir = path.resolve(__dirname, '../lib')
 
