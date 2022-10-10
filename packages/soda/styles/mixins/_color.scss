@@ -1,0 +1,55 @@
+// 基础变量
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #fadb14 !default;
+$green: #52c41a !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$primary: $blue !default;
+$secondary: $gray-300 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$error: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+// 图标
+$so-icon-text: var(--so-icon-text, #252b3a); // 文字图标颜色，同 正文颜色
+$so-icon-bg: var(--so-icon-bg, #ffffff); // svg图标 背景色
+$so-icon-fill: var(--so-icon-fill, #d3d5d9); // svg图标 灰色填充色
+$so-icon-fill-hover: var(
+  --so-icon-fill-hover,
+  #adb5ce
+); // svg图标 灰色填充色悬停反馈色
+$so-icon-fill-active: var(
+  --so-icon-fill-active,
+  #5e7ce0
+); // svg图标 高亮填充色（激活状态）
+$so-icon-fill-active-hover: var(--so-icon-fill-active-hover, #526ecc);
+
+$so-icon-fill-hover: $gray-600;
+$so-icon-background-hover: $gray-300;
+// 按钮
+// $so-button-
+
+// 禁用
+$so-disabled-opacity: 0.5;

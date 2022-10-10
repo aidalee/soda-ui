@@ -1,0 +1,23 @@
+// 动效
+
+$so-animation-duration-slow: var(--so-animation-duration-slow, 300ms);
+$so-animation-duration-base: var(--so-animation-duration-base, 200ms);
+$so-animation-duration-fast: var(--so-animation-duration-fast, 100ms);
+
+$so-animation-ease-in: var(
+  --so-animation-ease-in,
+  cubic-bezier(0.5, 0, 0.84, 0.25)
+);
+$so-animation-ease-out: var(
+  --so-animation-ease-out,
+  cubic-bezier(0.16, 0.75, 0.5, 1)
+);
+$so-animation-ease-in-out: var(
+  --so-animation-ease-in-out,
+  cubic-bezier(0.5, 0.05, 0.5, 0.95)
+);
+$so-animation-ease-in-out-smooth: var(
+  --so-animation-ease-in-out-smooth,
+  cubic-bezier(0.645, 0.045, 0.355, 1)
+);
+$so-animation-linear: var(--so-animation-linear, cubic-bezier(0, 0, 1, 1));

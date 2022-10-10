@@ -1,0 +1,139 @@
+@import '../../styles/mixins/variables';
+@import '../../styles/mixins/mixin';
+@import '../../styles/mixins/color';
+@import '../../styles/mixins/font';
+@import '../../styles/mixins/corner';
+
+$so-btn-padding-md: var(--so-btn-padding, 8px 10px);
+$so-btn-padding-sm: var(--so-btn-padding-sm, 6px 8px);
+$so-btn-padding-lg: var(--so-btn-padding-lg, 10px 12px);
+
+.so-button {
+  outline: 0;
+  -webkit-appearance: none;
+  position: relative;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  &--sm {
+    width: auto;
+    height: 24px;
+    @include button-size(
+      $so-btn-padding-sm,
+      $so-font-size-sm,
+      $so-btn-border-radius-sm
+    );
+  }
+
+  &--md {
+    height: 32px;
+    @include button-size(
+      $so-btn-padding-md,
+      $so-font-size-md,
+      $so-btn-border-radius
+    );
+  }
+
+  &--lg {
+    height: 40px;
+    @include button-size(
+      $so-btn-padding-lg,
+      $so-font-size-lg,
+      $so-btn-border-radius-lg
+    );
+  }
+
+  &--primary {
+    @include button-style($primary, $primary, $white);
+  }
+
+  &--success {
+    @include button-style($success, $success, $white);
+  }
+
+  &--error {
+    @include button-style($error, $error, $white);
+  }
+
+  &--warning {
+    @include button-style($warning, $warning, $white);
+  }
+
+  &--default {
+    @include button-style($gray-200, $white, $gray-800);
+  }
+
+  &.focus,
+  &:focus {
+    &.so-button {
+      &.so-button-plain {
+        background: $gray-200;
+      }
+    }
+  }
+
+  &--plain {
+    background: $white;
+
+    &.so-button--primary {
+      color: $primary;
+    }
+
+    &.so-button--success {
+      color: $success;
+    }
+
+    &.so-button--error {
+      color: $error;
+    }
+
+    &.so-button--warning {
+      color: $warning;
+    }
+
+    &.so-button--default {
+      color: $gray-200;
+    }
+
+    &.so-button--disabled {
+      background: $white;
+      color: $gray-600;
+    }
+  }
+
+  &--circle {
+    border-radius: 25px;
+  }
+
+  &--round {
+    border-radius: 5px;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: $so-disabled-opacity;
+  }
+
+  &.so-button__icon {
+    padding: 8px;
+    line-height: 1em;
+    min-width: unset;
+  }
+  &:not(.so-button__icon) {
+    .icon-fix {
+      font-size: 14px;
+    }
+  }
+}
+
+.so-button__icon-fix {
+  position: relative;
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}

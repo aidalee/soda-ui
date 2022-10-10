@@ -1,0 +1,132 @@
+@import './var';
+
+code {
+  background-color: #f8f8f8;
+  color: #58727e;
+}
+
+pre code {
+  position: relative;
+  display: block;
+  padding: 16px 20px;
+  overflow-x: auto;
+  color: $so-doc-code-color;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: $so-doc-code-font-family;
+  line-height: 26px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  -webkit-font-smoothing: auto;
+  border-radius: $so-doc-border-radius;
+}
+
+pre {
+  margin: 20px 0 0;
+
+  + p {
+    margin-top: 20px !important;
+  }
+}
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  overflow-x: auto;
+  background: #fff;
+}
+
+.hljs-subst {
+  color: $so-doc-code-color;
+}
+
+.hljs-string,
+.hljs-meta,
+.hljs-symbol,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-addition {
+  color: $so-doc-green;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #999;
+}
+
+.hljs-params,
+.hljs-keyword,
+.hljs-attribute {
+  color: $so-doc-purple;
+}
+
+.hljs-deletion,
+.hljs-variable,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-bullet,
+.hljs-link {
+  color: #eb6f6f;
+}
+
+.hljs-attr,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-built_in,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-strong {
+  color: #4994df;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.so-doc-card {
+  margin-bottom: 24px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px #ebedf0;
+  & > table {
+    width: 100%;
+    margin-top: 12px;
+    color: #34495e;
+    font-size: 14px;
+    line-height: 1.5;
+    border-collapse: collapse;
+    code {
+      display: inline;
+      margin: 0 2px;
+      padding: 2px 5px;
+      font-size: 14px;
+      font-family: inherit;
+      font-weight: 600;
+      word-break: keep-all;
+      border-radius: 4px;
+    }
+    th {
+      padding: 8px 10px;
+      font-weight: 600;
+      text-align: left;
+    }
+    td {
+      padding: 8px;
+      border-top: 1px solid #f1f4f8;
+      em {
+        display: inline-block;
+        color: #4fc08d;
+        font-size: 14px;
+        font-family: Source Code Pro, Monaco, Inconsolata, monospace;
+        font-style: normal;
+        max-width: 300px;
+      }
+    }
+  }
+}

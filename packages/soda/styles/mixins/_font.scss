@@ -1,0 +1,20 @@
+// 字号大小 字重 变量
+$so-font-size: var(--so-font-size, 12px);
+
+$so-font-size-icon: var(--so-font-size-icon, 16px);
+$so-font-size-sm: var(
+  --so-font-size-sm,
+  12px
+); //当组件size为'sm'时使用此字号大小
+$so-font-size-md: var(
+  --so-font-size-md,
+  14px
+); //当组件size为'md'时使用此字号大小
+$so-font-size-lg: var(
+  --so-font-size-sm,
+  16px
+); //当组件size为'lg'时使用此字号大小
+
+$so-font-title-weight: bold; //标题文字粗细
+$so-font-content-weight: normal; // 内容文字粗细
+$so-line-height-base: 1.5; // 规范行高
