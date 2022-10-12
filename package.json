@@ -8,7 +8,8 @@
     "build:docs": "vite build --config ./scripts/docs.config.js",
     "dev:docs": "vite serve examples --config ./scripts/example.config.js",
     "build:components": "node ./scripts/lib.config.js",
-    "lint": "eslint . --ext .js,.ts,.tsx,.vue"
+    "lint": "eslint . --ext .js,.ts,.tsx,.vue",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",

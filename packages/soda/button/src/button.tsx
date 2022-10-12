@@ -1,4 +1,4 @@
-import { defineComponent, toRefs, reactive, ref } from 'vue'
+import { defineComponent, toRefs } from 'vue'
 import type { SetupContext } from 'vue'
 import { buttonProps, ButtonProps } from './button-types'
 import useButton from './use-button'
