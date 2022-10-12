@@ -5,6 +5,7 @@ import type {
   InjectionKey,
   Ref
 } from 'vue'
+import { EmitType } from '../../types'
 
 export type IButtonType =
   | 'primary'
@@ -63,6 +64,15 @@ export const buttonProps = {
     type: Object,
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     default: () => {}
+  },
+  tag: {
+    type: String as PropType<keyof HTMLElementTagNameMap>,
+    default: 'button'
+  },
+  // just for jsx
+  onClick: {
+    type: [Function, Array] as PropType<EmitType<(e: MouseEvent) => void>>
+    // type: Function as PropType<(e: MouseEvent) => void>
   }
 } as const
 
