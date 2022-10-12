@@ -25,10 +25,7 @@ function createBem(
  * @param neetDot do you need a dot prefix (default: false)
  * @returns UseNamespace
  */
-export function useNamespace(
-  block: string,
-  neetDot = false
-): UseNamespace {
+export function useNamespace(block: string, neetDot = false): UseNamespace {
   const namespace = neetDot ? `.so-${block}` : `so-${block}`
 
   const b = () => createBem(namespace)

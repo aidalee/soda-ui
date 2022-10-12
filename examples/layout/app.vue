@@ -1,27 +1,16 @@
 <template>
-  <div
-    v-if="!isDemoPage"
-    class="docs"
-  >
+  <div v-if="!isDemoPage" class="docs">
     <div class="docs__header">
-      <router-link to="/">
-        So UI
-      </router-link>
+      <router-link to="/"> So UI </router-link>
       <div class="header-nav">
-        <router-link to="/">
-          指南
-        </router-link>
-        <router-link to="/components/button">
-          组件
-        </router-link>
+        <router-link to="/"> 指南 </router-link>
+        <router-link to="/components/button"> 组件 </router-link>
       </div>
     </div>
     <div class="docs__main">
       <router-view />
     </div>
-    <div class="docs__footer">
-      footer
-    </div>
+    <div class="docs__footer">footer</div>
   </div>
   <router-view v-else />
 </template>
