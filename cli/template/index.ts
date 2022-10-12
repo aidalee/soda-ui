@@ -6,7 +6,7 @@ export default function genIndexTemplate(name) {
 import { App } from 'vue'
 import ${compName} from './src/${name}'
 import { installComponent } from '../install'
-import type { SodaUIOptions } from '../_utils/global-config'
+import type { SodaUIOptions } from '../utils/global-config'
 
 // 具名导出
 export { ${compName} }
