@@ -2,7 +2,9 @@
   <div class="doc-page__container">
     <!-- 左侧栏 -->
     <div class="doc-page__menu">
-      <router-link to="/components/button"> button </router-link>
+      <router-link to="/components/button">
+        button
+      </router-link>
     </div>
     <!-- 中间文档 -->
     <div class="doc-page__content">

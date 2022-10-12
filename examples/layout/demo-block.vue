@@ -1,9 +1,15 @@
 <template>
   <div class="so-doc-demo-block">
-    <h2 v-if="title" class="so-doc-demo-block__title">
+    <h2
+      v-if="title"
+      class="so-doc-demo-block__title"
+    >
       {{ title }}
     </h2>
-    <div v-if="card" class="so-doc-demo-block__card">
+    <div
+      v-if="card"
+      class="so-doc-demo-block__card"
+    >
       <slot />
     </div>
     <slot v-else />

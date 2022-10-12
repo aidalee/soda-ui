@@ -1,4 +1,4 @@
-import { defineComponent, toRefs, reactive, ref } from 'vue'
+import { defineComponent, toRefs, reactive, ref } from "vue"
 import type { SetupContext } from 'vue'
 import { buttonProps, ButtonProps } from './button-types'
 import useButton from './use-button'
@@ -11,7 +11,7 @@ export default defineComponent({
   props: buttonProps,
   emits: ['click'],
   setup(props: ButtonProps, ctx: SetupContext) {
-    let { disabled, loading, delay, style, color } = toRefs(props)
+    const { disabled, loading, delay, style, color } = toRefs(props)
     const { classes, iconClass } = useButton(props, ctx)
 
     let _throttle: () => void

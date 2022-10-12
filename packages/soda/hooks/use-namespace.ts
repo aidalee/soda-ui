@@ -27,7 +27,7 @@ function createBem(
  */
 export function useNamespace(
   block: string,
-  neetDot: boolean = false
+  neetDot = false
 ): UseNamespace {
   const namespace = neetDot ? `.so-${block}` : `so-${block}`
 

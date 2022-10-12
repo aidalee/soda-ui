@@ -2,7 +2,10 @@
 <template>
   <div class="so-doc-demo__mobi">
     <div class="so-doc-demo__mobi__content">
-      <iframe :src="demoUrl" frameborder="0" />
+      <iframe
+        :src="demoUrl"
+        frameborder="0"
+      />
     </div>
   </div>
 </template>
