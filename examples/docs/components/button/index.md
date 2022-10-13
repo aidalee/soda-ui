@@ -55,9 +55,17 @@
 ### color 属性自定义按钮颜色
 
 ```html
-<so-button color="linear-gradient(to right, #ff6034, #ee0a24)"
-  >渐变色</so-button
->
+<so-button color="linear-gradient(to right, #ff6034, #ee0a24)">
+  渐变色
+</so-button>
+```
+
+### 文字按钮
+
+```html
+<so-button type="text"> text1 </so-button>
+<so-button type="text"> text2 </so-button>
+<so-button type="text"> text3 </so-button>
 ```
 
 ## API
@@ -66,7 +74,7 @@
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
-| type | 类型 | _string_ | `primary` `success` `warning` `danger` `default` | `default` |
+| type | 类型 | _string_ | `primary` `success` `warning` `danger` `default` `text` | `default` |
 | size | 尺寸 | _string_ | `lg` `md` `sm` | `md` |
 | color | 自定义按钮颜色，支持 `linear-gradient` 渐变色 | _string_ | - | - |
 | delay | 延迟点击时间，单位 ms | _number_ | - | - |

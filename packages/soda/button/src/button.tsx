@@ -3,7 +3,7 @@ import { defineComponent, toRefs } from 'vue'
 import type { SetupContext } from 'vue'
 import { buttonProps, ButtonProps } from './button-types'
 import useButton from './use-button'
-import './button.scss'
+import '../style/button.scss'
 import { throttle } from 'throttle-debounce'
 // import { Icon } from '../../icon';
 
