@@ -32,6 +32,11 @@
       dianji
     </so-button>
   </demo-block>
+  <demo-block title="文字按钮">
+    <so-button type="text"> text1 </so-button>
+    <so-button type="text"> text2 </so-button>
+    <so-button type="text"> text3 </so-button>
+  </demo-block>
 </template>
 
 <script lang="ts">

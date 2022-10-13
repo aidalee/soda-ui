@@ -68,6 +68,13 @@ $so-btn-padding-lg: var(--so-btn-padding-lg, 10px 12px);
     @include button-style($gray-200, $white, $gray-800);
   }
 
+  &--text {
+    @include button-style($gray-200, $white, $gray-800);
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
   &.focus,
   &:focus {
     &.so-button {
