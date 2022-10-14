@@ -13,6 +13,10 @@ export default defineConfig({
     // 支持tsx
     transformMode: {
       web: [/.[tj]sx$/]
+    },
+    coverage: {
+      provider: 'istanbul', // or 'c8'
+      reporter: ['text', 'json', 'html']
     }
   },
   esbuild: {

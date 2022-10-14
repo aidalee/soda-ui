@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
+    "coverage": "vitest run --coverage",
     "build:docs": "vite build --config ./scripts/docs.config.js",
     "dev:docs": "vite serve examples --config ./scripts/example.config.js",
     "build:components": "node ./scripts/lib.config.js",
@@ -33,6 +34,7 @@
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
     "@vitejs/plugin-vue": "^3.0.3",
+    "@vitest/coverage-istanbul": "^0.24.1",
     "@vue/test-utils": "^2.1.0",
     "commander": "^9.4.1",
     "eslint": "^8.24.0",
