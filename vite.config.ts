@@ -14,5 +14,10 @@ export default defineConfig({
     transformMode: {
       web: [/.[tj]sx$/]
     }
+  },
+  esbuild: {
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment',
+    jsxInject: "import { h } from 'vue';"
   }
 })
