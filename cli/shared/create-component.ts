@@ -24,11 +24,11 @@ export default function createComponent(meta: ComponentMeta) {
 
   // 其他核心文件目录：组件源文件、类型、样式、测试
   const compSrcDir = resolve(componentDir, 'src')
-  // const styleDir = resolve(componentDir, 'style')
+  const styleDir = resolve(componentDir, 'style')
   const testDir = resolve(componentDir, 'test')
 
   ensureDirSync(compSrcDir)
-  // ensureDirSync(styleDir)
+  ensureDirSync(styleDir)
   ensureDirSync(testDir)
 
   // 文件和内容创建
@@ -37,15 +37,15 @@ export default function createComponent(meta: ComponentMeta) {
   writeFileSync(coreFilePath, genCoreTemplate(name), WRITE_FILE_OPTIONS)
 
   // 核心文件：组件类型文件
-  const typesFilePath = resolve(compSrcDir, name + '-type.ts')
+  const typesFilePath = resolve(compSrcDir, name + '-types.ts')
   writeFileSync(typesFilePath, genTypesTemplate(name), WRITE_FILE_OPTIONS)
 
   // 核心文件：组件样式文件
   // 样式文件
-  // const styleFilePath = styleDir + `/${name}.scss`
-  // writeFileSync(styleFilePath, genStyleTemplate(name), WRITE_FILE_OPTIONS)
-  const styleFilePath = resolve(compSrcDir, name + '.scss')
+  const styleFilePath = resolve(styleDir, name + '.scss')
   writeFileSync(styleFilePath, genStyleTemplate(name), WRITE_FILE_OPTIONS)
+  // const styleFilePath = resolve(compSrcDir, name + '.scss')
+  // writeFileSync(styleFilePath, genStyleTemplate(name), WRITE_FILE_OPTIONS)
 
   // 核心文件：测试文件
   const testFilePath = testDir + `/${name}.test.ts`
