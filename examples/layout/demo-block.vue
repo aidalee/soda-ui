@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .so-doc-demo-block {
-  padding: 12px 15px;
+  padding: 12px 10px;
   &__title {
     margin: 0;
     padding: 32px 16px 16px;

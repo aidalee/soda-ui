@@ -12,7 +12,7 @@ import { defineComponent, toRefs } from 'vue'
 import { ${propsTypeName}, ${propsName} } from './${propsFileName}'
 
 export default defineComponent({
-  name: 'So${compName}',
+  name: '${compName}',
   props: ${propsName},
   setup(props: ${propsTypeName}) {
     return () => {

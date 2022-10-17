@@ -2,9 +2,10 @@ import { defineComponent, toRefs } from 'vue'
 import type { SetupContext } from 'vue'
 import { ListProps, listProps } from './list-types'
 import useList from './use-list'
+import '../style/list.scss'
 
 export default defineComponent({
-  name: 'SoList',
+  name: 'List',
   props: listProps,
   setup(props: ListProps, ctx: SetupContext) {
     const { title } = toRefs(props)

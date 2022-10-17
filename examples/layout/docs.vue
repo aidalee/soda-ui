@@ -3,13 +3,14 @@
     <!-- 左侧栏 -->
     <div class="doc-page__menu">
       <router-link to="/components/button"> button </router-link>
+      <router-link to="/components/list"> list列表 </router-link>
     </div>
     <!-- 中间文档 -->
     <div class="doc-page__content">
       <router-view />
     </div>
     <!-- 右侧手机模拟器加iframe -->
-    <div class="doc-page__example">
+    <div :class="['doc-page__example', { 'doc-page__example-fixed': isFixed }]">
       <!-- <iframe :src="demoUrl" frameborder="0"></iframe> -->
       <!-- <router-view></router-view> -->
       <Demo />
@@ -23,7 +24,21 @@ export default {
   components: {
     Demo
   },
-  computed: {}
+  data() {
+    return {
+      scrollTop: window.scrollY
+    }
+  },
+  computed: {
+    isFixed() {
+      return this.scrollTop > 60
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', () => {
+      this.scrollTop = window.scrollY
+    })
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -31,6 +46,7 @@ export default {
   display: flex;
   .doc-page__menu {
     width: 200px;
+    height: 100vh;
     box-shadow: 2px 0px 8px #f0f1f2;
     display: flex;
     flex-direction: column;
@@ -43,16 +59,14 @@ export default {
   }
   .doc-page__example {
     position: absolute;
-    top: 88px;
+    top: 72px;
     right: 24px;
     z-index: 1;
-    // box-sizing: border-box;
     min-width: 375px;
-    // min-width: 360px;
-    // overflow: hidden;
-    // background: #fafafa;
-    // border-radius: 20px;
-    // box-shadow: 0 8px 12px #ebedf0;
+  }
+  .doc-page__example-fixed {
+    position: fixed;
+    top: 12px;
   }
 }
 </style>

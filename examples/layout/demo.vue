@@ -12,8 +12,9 @@ export default {
     demoUrl() {
       const match = this.$route.path.match(/[components|packages]\/(.*)/)
       const component = match && match[1]
+      console.log(component, location.origin, location.pathname)
       return `${location.origin}${location.pathname}#/demo/${component}`
-      // return `${location.origin}/#/demo/button`;
+      // return `${location.origin}/#/demo/button`
     }
   }
 }

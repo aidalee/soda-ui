@@ -14,7 +14,6 @@ export function installComponent(
 
   if (!registered) {
     setGlobalConfig(app, options)
-    console.log('====', componentPrefix + component.name)
     app.component(componentPrefix + component.name, component)
   }
 }

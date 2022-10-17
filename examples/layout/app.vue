@@ -10,7 +10,7 @@
     <div class="docs__main">
       <router-view />
     </div>
-    <div class="docs__footer">footer</div>
+    <!-- <div class="docs__footer">footer</div> -->
   </div>
   <router-view v-else />
 </template>
@@ -47,16 +47,16 @@ export default {
   .docs__main {
     overflow: scroll;
   }
-  .docs__footer {
-    height: 100px;
-    // position: fixed;
-    // left: 0;
-    // bottom: 0;
-    // right: 0;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  // .docs__footer {
+  //   height: 100px;
+  //   position: fixed;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background: #fff;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
 }
 </style>
