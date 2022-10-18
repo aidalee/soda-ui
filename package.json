@@ -1,6 +1,6 @@
 {
   "name": "soda-ui",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "vue3 mobile ui",
   "main": "./lib/soda-ui.umd.js",
   "module": "./lib/soda-ui.mjs",

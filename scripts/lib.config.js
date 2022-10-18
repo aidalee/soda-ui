@@ -39,7 +39,7 @@ const rollupOptions = {
 const createPackageJson = name => {
   // 预设模板
   const fileStr = `{
-    "name": "${name ? name : 'soda-ui'}",
+    "name": "${name ? 'so-button' : 'soda-ui'}",
     "version": "${version}",
     "main": "${name ? 'index.umd.js' : 'soda-ui.umd.js'}",
     "module": "${name ? 'index.mjs' : 'soda-ui.mjs'}",
