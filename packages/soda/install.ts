@@ -14,7 +14,9 @@ export function installComponent(
   const registered = app.component(componentPrefix + component.name)
 
   if (!registered) {
+    console.log('reging')
     setGlobalConfig(app, options)
+    console.log('reged')
     app.component(componentPrefix + component.name, component)
   }
 }

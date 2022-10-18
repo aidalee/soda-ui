@@ -1,2 +1,2 @@
 export { default as SoButton } from './button'
-export { default as SoList, SoListItem } from './list'
+export { default as SoList, default as SoListItem } from './list'
