@@ -4,12 +4,6 @@
   "description": "vue3 mobile ui",
   "main": "./lib/soda-ui.umd.js",
   "module": "./lib/soda-ui.mjs",
-  "exports": {
-    ".": {
-      "import": "./lib/soda-ui.mjs",
-      "require": "./lib/soda-ui.umd.js"
-    }
-  },
   "files": [
     "lib/*"
   ],
