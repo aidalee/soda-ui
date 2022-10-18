@@ -10,6 +10,7 @@ export function installComponent(
   options?: SodaUIOptions
 ) {
   const componentPrefix = getComponentPrefix(options)
+  console.log('componentPrefix', componentPrefix, component.name)
   const registered = app.component(componentPrefix + component.name)
 
   if (!registered) {
