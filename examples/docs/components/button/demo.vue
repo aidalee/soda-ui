@@ -1,5 +1,8 @@
 <template>
   <demo-block title="按钮类型">
+    <SoButton type="primary"> SoButton </SoButton>
+    <Button type="primary"> Button </Button>
+
     <so-button type="primary"> primary </so-button>
     <so-button type="success"> success </so-button>
     <so-button type="warning"> warning </so-button>

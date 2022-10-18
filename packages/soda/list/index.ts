@@ -1,11 +1,11 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 import List from './src/list'
 import ListItem from './src/list-item'
 import { installComponent } from '../install'
 import type { SodaUIOptions } from '../utils/global-config'
 
 // 具名导出
-export { List, ListItem }
+export { List as SoList, ListItem as SoListItem }
 
 // 导出插件
 export default {

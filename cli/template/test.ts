@@ -2,7 +2,7 @@ import { upperFirst } from './utils'
 
 export default function genTestTemplate(name) {
   return `\
-import { render } from '@testing-library/vue'
+import { mount } from '@vue/test-utils'
 import ${upperFirst(name)} from '../src/${name}'
 
 describe('${name} test', () => {

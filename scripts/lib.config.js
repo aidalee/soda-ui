@@ -42,7 +42,7 @@ const createPackageJson = name => {
     "name": "${name ? name : 'soda-ui'}",
     "version": "${version}",
     "main": "${name ? 'index.umd.js' : 'soda-ui.umd.js'}",
-    "module": "${name ? 'index.umd.js' : 'soda-ui.umd.js'}",
+    "module": "${name ? 'index.umd.js' : 'soda-ui.mjs'}",
     "author": "aidalee",
     "description": "mobile web components",
     "repository": {
