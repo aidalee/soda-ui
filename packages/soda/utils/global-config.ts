@@ -27,7 +27,6 @@ export const getComponentPrefix = (options?: SodaUIOptions): string =>
 // 获取组件class类
 export const getComponentCls = (componentName?: string): string => {
   const instance = getCurrentInstance()
-  console.log('instance', instance)
 
   const prefix =
     instance?.appContext.config.globalProperties[GLOBAL_CONFIG_NAME]
