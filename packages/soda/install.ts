@@ -1,4 +1,4 @@
-import { setGlobalConfig, getComponentPrefix } from './utils/global-config'
+// import { setGlobalConfig, getComponentPrefix } from './utils/global-config'
 import type { SodaUIOptions } from './utils/global-config'
 import type { App } from 'vue'
 
@@ -15,7 +15,7 @@ export function installComponent(
 
   if (!registered) {
     console.log('reging')
-    setGlobalConfig(app, options)
+    // setGlobalConfig(app, options)
     console.log('reged')
     app.component(componentPrefix + component.name, component)
   }
