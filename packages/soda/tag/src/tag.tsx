@@ -2,7 +2,7 @@ import { defineComponent } from 'vue'
 import type { SetupContext } from 'vue'
 
 export default defineComponent({
-  name: 'Tag',
+  name: 'SoTag',
   setup(props: any, ctx: SetupContext) {
     return () => {
       return (
