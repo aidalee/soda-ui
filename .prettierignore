@@ -1,0 +1,12 @@
+packages/soda-cli/lib/**
+
+packages/soda-ui/es/**
+packages/soda-ui/lib/**
+packages/soda-ui/umd/**
+packages/varlet-ui/types/index.d.ts
+
+**/package.json
+*.md
+
+pnpm-lock.yaml
+pnpm-workspace.yaml
