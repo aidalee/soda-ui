@@ -1,0 +1,25 @@
+{
+  "name": "@soda/eslint-config",
+  "version": "1.0.0",
+  "description": "eslint config of soda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "tslint",
+    "config",
+    "soda"
+  ],
+  "author": "aidalee",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-vue": "^9.6.0"
+  }
+}

@@ -19,13 +19,13 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "scripts/**/*.ts",
-    "packages/soda/**/*.ts",
-    "packages/soda/**/**/*.ts",
-    "packages/soda/**/**/*.d.ts",
-    "packages/soda/**/**/*.tsx",
-    "packages/soda/**/**/*.tsx",
-    "packages/soda/**/**/*.ts",
-    "packages/soda/**/**/*.vue"
+    "packages/soda-ui/components/**/*.ts",
+    "packages/soda-ui/components/**/**/*.ts",
+    "packages/soda-ui/components/**/**/*.d.ts",
+    "packages/soda-ui/components/**/**/*.tsx",
+    "packages/soda-ui/components/**/**/*.tsx",
+    "packages/soda-ui/components/**/**/*.ts",
+    "packages/soda-ui/components/**/**/*.vue"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

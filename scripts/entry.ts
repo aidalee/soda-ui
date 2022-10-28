@@ -1,9 +1,9 @@
 // 入口文件
 // 1. 引入已实现的组件批量导出去
 import type { App } from 'vue'
-import ButtonPlugin, { Button } from '../packages/soda/button'
-import ListPlugin, { List, ListItem } from '../packages/soda/list'
-import TagPlugin, { Tag } from '../packages/soda/tag'
+import ButtonPlugin, { Button } from '../packages/soda-ui/components/button'
+import ListPlugin, { List, ListItem } from '../packages/soda-ui/components/list'
+import TagPlugin, { Tag } from '../packages/soda-ui/components/tag'
 
 const version = require('../package.json').version
 

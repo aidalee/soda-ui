@@ -84,17 +84,17 @@ export default defineConfig({
       markdownItOptions: {
         typographer: false, // https://markdown-it.github.io/markdown-it/#MarkdownIt
         highlight: markdownHighlight
-      },
-      markdownItSetup(md) {
-        // const require = createRequire(import.meta.url);
-        // const { slugify } = require('transliteration');
-        // const markdownItAnchor = require('markdown-it-anchor');
-        // markdownLinkOpen(md);
-        // md.use(markdownItAnchor, {
-        //   level: 2,
-        //   slugify,
-        // });
       }
+      // markdownItSetup(md) {
+      //   const require = createRequire(import.meta.url);
+      //   const { slugify } = require('transliteration');
+      //   const markdownItAnchor = require('markdown-it-anchor');
+      //   markdownLinkOpen(md)
+      //   md.use(markdownItAnchor, {
+      //     level: 2,
+      //     slugify
+      //   })
+      // }
     })
   ]
 })

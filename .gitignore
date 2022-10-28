@@ -16,6 +16,16 @@ dist-ssr
 .husky/*
 lib
 test
+packages/soda-cli/lib/commands
+packages/soda-cli/lib/compiler
+packages/soda-cli/lib/config
+packages/soda-cli/lib/shared
+packages/soda-cli/lib/index.d.ts
+packages/soda-cli/lib/bin.d.ts
+
+packages/soda-ui/lib
+packages/soda-ui/es
+packages/soda-ui/umd
 
 # Editor directories and files
 .vscode/*

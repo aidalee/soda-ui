@@ -1,2 +1,9 @@
 lib
 examples/dist
+packages/soda-cli/lib/**
+packages/soda-ui/lib/**
+packages/soda-ui/es/**
+packages/soda-ui/umd/**
+packages/soda-ui/types/index.d.ts
+packages/soda-ui/components/test/**
+packages/soda-cli

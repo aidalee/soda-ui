@@ -12,15 +12,39 @@
     "coverage": "vitest run --coverage",
     "build:docs": "vite build --config ./scripts/docs.config.js",
     "dev:docs": "vite serve examples --config ./scripts/example.config.js",
-    "build:components": "node ./scripts/lib.config.js",
+    "build:components": "node ./scripts/lib.config.mjs",
     "lint": "eslint . --ext .js,.ts,.tsx,.vue",
     "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "eslintConfig": {
+    "ignorePatterns": [
+      "packages/soda-cli/lib/**",
+      "packages/soda-ui/lib/**",
+      "packages/soda-ui/es/**",
+      "packages/soda-ui/umd/**",
+      "packages/soda-ui/types/index.d.ts",
+      "packages/soda-ui/components/test/**"
+    ],
+    "extends": [
+      "@soda/eslint-config"
+    ]
+  },
+  "stylelint": {
+    "ignoreFiles": [
+      "packages/soda-cli/lib/**",
+      "packages/soda-ui/lib/**",
+      "packages/soda-ui/es/**",
+      "packages/soda-ui/umd/**"
+    ]
+  },
   "dependencies": {
+    "@soda/eslint-config": "workspace:^1.0.0",
+    "@types/glob": "^8.0.0",
     "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "glob": "^8.0.3",
     "highlight.js": "^11.6.0",
     "vite-plugin-dts": "^1.4.1",
     "vite-plugin-md": "^0.20.2",
@@ -28,6 +52,8 @@
     "vue-router": "4"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@soda/cli": "workspace:*",
     "@testing-library/vue": "^6.6.1",
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "8.2.2",
@@ -40,6 +66,7 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitest/coverage-istanbul": "^0.24.1",
     "@vue/test-utils": "^2.1.0",
+    "chalk": "^5.1.2",
     "commander": "^9.4.1",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
@@ -53,9 +80,11 @@
     "lodash": "^4.17.21",
     "markdown-it-container": "^3.0.0",
     "node-sass": "^7.0.1",
+    "ora": "^6.1.2",
     "prettier": "^2.7.1",
     "rollup-plugin-external-globals": "^0.6.1",
     "sass": "^1.54.5",
+    "scss": "^0.2.4",
     "throttle-debounce": "^5.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
