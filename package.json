@@ -34,6 +34,9 @@
     ]
   },
   "stylelint": {
+    "extends": [
+      "@soda/stylelint-config"
+    ],
     "ignoreFiles": [
       "packages/soda-cli/lib/**",
       "packages/soda-ui/lib/**",
@@ -42,7 +45,6 @@
     ]
   },
   "dependencies": {
-    "@soda/eslint-config": "workspace:^1.0.0",
     "@types/glob": "^8.0.0",
     "@vitejs/plugin-vue-jsx": "^2.0.0",
     "glob": "^8.0.3",
@@ -55,6 +57,8 @@
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@soda/cli": "workspace:*",
+    "@soda/eslint-config": "workspace:^1.0.0",
+    "@soda/stylelint-config": "workspace:^1.0.0",
     "@testing-library/vue": "^6.6.1",
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "8.2.2",
@@ -93,6 +97,7 @@
     "vue-tsc": "^0.39.5"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue}": "eslint --cache --fix"
+    "*.{js,ts,tsx,vue}": "eslint --cache --fix",
+    "*.{vue,css,less}": "stylelint --fix"
   }
 }

@@ -7,6 +7,7 @@ importers:
       '@babel/core': ^7.19.6
       '@soda/cli': workspace:*
       '@soda/eslint-config': workspace:^1.0.0
+      '@soda/stylelint-config': workspace:^1.0.0
       '@testing-library/vue': ^6.6.1
       '@types/fs-extra': ^9.0.13
       '@types/glob': ^8.0.0
@@ -52,7 +53,6 @@ importers:
       vue-router: '4'
       vue-tsc: ^0.39.5
     dependencies:
-      '@soda/eslint-config': link:packages/soda-eslint-config
       '@types/glob': 8.0.0
       '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.1.6+vue@3.2.40
       glob: 8.0.3
@@ -64,6 +64,8 @@ importers:
     devDependencies:
       '@babel/core': 7.19.6
       '@soda/cli': link:packages/soda-cli
+      '@soda/eslint-config': link:packages/soda-eslint-config
+      '@soda/stylelint-config': link:packages/soda-stylelint-config
       '@testing-library/vue': 6.6.1_vue@3.2.40
       '@types/fs-extra': 9.0.13
       '@types/inquirer': 8.2.2
@@ -171,6 +173,14 @@ importers:
       eslint-config-prettier: 8.5.0
       eslint-plugin-import: 2.26.0_46x2qgupc2xqbviuruvkyty2ki
       eslint-plugin-vue: 9.6.0
+
+  packages/soda-stylelint-config:
+    specifiers:
+      stylelint-config-prettier: ^9.0.3
+      stylelint-config-standard: ^29.0.0
+    dependencies:
+      stylelint-config-prettier: 9.0.3
+      stylelint-config-standard: 29.0.0
 
   packages/soda-ui:
     specifiers:
@@ -5967,6 +5977,28 @@ packages:
     dependencies:
       acorn: 8.8.0
     dev: true
+
+  /stylelint-config-prettier/9.0.3:
+    resolution: {integrity: sha512-5n9gUDp/n5tTMCq1GLqSpA30w2sqWITSSEiAWQlpxkKGAUbjcemQ0nbkRvRUa0B1LgD3+hCvdL7B1eTxy1QHJg==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    peerDependencies:
+      stylelint: '>=11.0.0'
+    dev: false
+
+  /stylelint-config-recommended/9.0.0:
+    resolution: {integrity: sha512-9YQSrJq4NvvRuTbzDsWX3rrFOzOlYBmZP+o513BJN/yfEmGSr0AxdvrWs0P/ilSpVV/wisamAHu5XSk8Rcf4CQ==}
+    peerDependencies:
+      stylelint: ^14.10.0
+    dev: false
+
+  /stylelint-config-standard/29.0.0:
+    resolution: {integrity: sha512-uy8tZLbfq6ZrXy4JKu3W+7lYLgRQBxYTUUB88vPgQ+ZzAxdrvcaSUW9hOMNLYBnwH+9Kkj19M2DHdZ4gKwI7tg==}
+    peerDependencies:
+      stylelint: ^14.14.0
+    dependencies:
+      stylelint-config-recommended: 9.0.0
+    dev: false
 
   /supports-color/5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}

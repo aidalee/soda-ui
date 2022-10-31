@@ -1,0 +1,16 @@
+{
+  "name": "@soda/stylelint-config",
+  "version": "1.0.0",
+  "description": "stylelint config of soda",
+  "main": "index.js",
+  "keywords": [
+    "stylelint",
+    "soda"
+  ],
+  "author": "aidalee",
+  "license": "MIT",
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^29.0.0"
+  }
+}

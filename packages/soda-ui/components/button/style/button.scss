@@ -8,7 +8,9 @@ $so-btn-padding-md: var(--so-btn-padding, 8px 10px);
 $so-btn-padding-sm: var(--so-btn-padding-sm, 6px 8px);
 $so-btn-padding-lg: var(--so-btn-padding-lg, 10px 12px);
 
-.so-button {
+.so-button 
+
+{
   outline: 0;
   -webkit-appearance: none;
   position: relative;
