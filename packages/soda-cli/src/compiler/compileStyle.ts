@@ -9,17 +9,18 @@ export const EMPTY_LINE_RE = /[\n\r]*/g
 // import
 export const IMPORT_CSS_RE =
   /(?<!['"`])import\s+['"](\.{1,2}\/.+\.css)['"]\s*;?(?!\s*['"`])/g
-export const IMPORT_LESS_RE =
-  /(?<!['"`])import\s+['"](\.{1,2}\/.+\.less)['"]\s*;?(?!\s*['"`])/g
+// export const IMPORT_LESS_RE =
+//   /(?<!['"`])import\s+['"](\.{1,2}\/.+\.less)['"]\s*;?(?!\s*['"`])/g
 export const IMPORT_SCSS_RE =
   /(?<!['"`])import\s+['"](\.{1,2}\/.+\.scss)['"]\s*;?(?!\s*['"`])/g
 // require
 export const REQUIRE_CSS_RE =
   /(?<!['"`])require\(\s*['"](\.{1,2}\/.+\.css)['"]\s*\);?(?!\s*['"`])/g
-export const REQUIRE_LESS_RE =
-  /(?<!['"`])require\(\s*['"](\.{1,2}\/.+\.less)['"]\s*\);?(?!\s*['"`])/g
+// export const REQUIRE_LESS_RE =
+//   /(?<!['"`])require\(\s*['"](\.{1,2}\/.+\.less)['"]\s*\);?(?!\s*['"`])/g
 export const REQUIRE_SCSS_RE =
   /(?<!['"`])require\(\s*['"](\.{1,2}\/.+\.scss)['"]\s*\);?(?!\s*['"`])/g 
+
 export const STYLE_IMPORT_RE = /@import\s+['"](.+)['"]\s*;/g
 
 export const clearEmptyLine = (s: string) =>
@@ -27,8 +28,8 @@ export const clearEmptyLine = (s: string) =>
 
 export function normalizeStyleDependency(styleImport: string, reg: RegExp) {
   let relativePath = styleImport.replace(reg, '$1')
-  relativePath = relativePath.replace(/(\.less)|(\.css)/, '')
-
+  relativePath = relativePath.replace(/(\.scss)|(\.css)/, '')
+  
   if (relativePath.startsWith('./')) {
     return '.' + relativePath
   }
@@ -44,7 +45,6 @@ export function extractStyleDependencies(
   const styleImports = code.match(styleReg) ?? []
   const cssFile = resolve(parse(file).dir, './style/index.js')
   const modules = process.env.BABEL_MODULE
-
   styleImports.forEach((styleImport: string) => {
     const normalizedPath = normalizeStyleDependency(styleImport, styleReg)
     smartAppendFileSync(
@@ -67,8 +67,7 @@ export function extractStyleDependencies(
 // }
 
 export async function compileScss(file: string) {
-  const source = readFileSync(file, 'utf-8')
-  const result = await compileAsync(source).toString() // clearEmptyLine 需要的是string 假设先转化成string
+  let result = (await compileAsync(file)).css
   removeSync(file)
   writeFileSync(replaceExt(file, '.css'), clearEmptyLine(result), 'utf-8')
 }

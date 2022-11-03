@@ -54,7 +54,7 @@ export function getESMBundleConfig(
   // Varlet(varlet.esm.js) => SodaUI(soda-ui.esm.js)
   // sodaConfig 应该只用到了name 那先定个常量代替
   // const name = get(sodaConfig, 'name')
-  const name = 'SodaUI'
+  const name = 'SodaUi'
   const fileName = `${kebabCase(name)}.esm.js`
 
   return {
@@ -86,7 +86,7 @@ export function getUMDConfig(sodaConfig: Record<string, any>): InlineConfig {
   // Varlet(varlet.esm.js) => SodaUI(soda-ui.js)
   // sodaConfig 应该只用到了name 那先定个常量代替
   // const name = get(sodaConfig, 'name')
-  const name = 'SodaUI'
+  const name = 'SodaUi'
   const fileName = `${kebabCase(name)}.js`
 
   return {

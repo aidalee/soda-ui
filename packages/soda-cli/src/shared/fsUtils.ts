@@ -44,7 +44,6 @@ export const replaceExt = (file: string, ext: string): string =>
 export function smartAppendFileSync(file: string, code: string) {
   if (pathExistsSync(file)) {
     const content = readFileSync(file, 'utf-8')
-
     if (!content.includes(code)) {
       appendFileSync(file, code)
     }

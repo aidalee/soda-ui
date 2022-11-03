@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-console.log('node bin test')
 import { Command } from 'commander'
 import { compile } from './commands/compile'
 // 创建命令行对象

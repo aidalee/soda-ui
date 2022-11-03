@@ -12,11 +12,14 @@ export function removeDir() {
 
 export async function runTask(taskName: string, task: () => any) {
   // const s = ora().start(`Compiling ${taskName}`)
+  console.log(`start ${taskName}`)
   try {
     await task()
     // s.succeed(`Compilation ${taskName} completed!`)
+    console.log(`Compilation ${taskName} completed!`)
   } catch (e: any) {
     // s.fail(`Compilation ${taskName} failed!`)
+    console.log(`Compilation ${taskName} failed!`)
     // logger.error(e.toString())
   }
 }
@@ -42,7 +45,7 @@ export async function compile(options: CompileCommandOptions) {
 
   process.env.TARGET_MODULE = 'commonjs'
   await runTask('commonjs', () => compileModule('commonjs'))
-
+  
   process.env.TARGET_MODULE = 'umd'
   !options.noUmd && (await runTask('umd', () => compileModule('umd')))
 }

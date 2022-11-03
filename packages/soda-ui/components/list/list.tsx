@@ -2,7 +2,7 @@ import { defineComponent, toRefs } from 'vue'
 import type { SetupContext } from 'vue'
 import { ListProps, listProps } from './list-types'
 import useList from './use-list'
-import '../style/list.scss'
+import './list.scss'
 
 export default defineComponent({
   name: 'List',

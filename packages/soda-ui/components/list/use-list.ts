@@ -1,7 +1,7 @@
 import { computed } from 'vue'
 import type { SetupContext } from 'vue'
 import { ListProps, UseListReturnType } from './list-types'
-import { useNamespace } from '../../../hooks/use-namespace'
+import { useNamespace } from '../../hooks/use-namespace'
 import { isString } from 'lodash'
 
 export default function useList(

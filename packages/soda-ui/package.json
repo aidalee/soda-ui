@@ -7,6 +7,18 @@
   "scripts": {
     "compile": "soda-cli compile"
   },
+  "files": [
+    "lib",
+    "es",
+    "umd"
+  ],
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*",
+    "es/style.js",
+    "lib/style.js",
+    "*.css"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

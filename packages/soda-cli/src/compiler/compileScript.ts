@@ -7,8 +7,6 @@ import {
   extractStyleDependencies,
   REQUIRE_CSS_RE,
   IMPORT_CSS_RE,
-  REQUIRE_LESS_RE,
-  IMPORT_LESS_RE,
   REQUIRE_SCSS_RE,
   IMPORT_SCSS_RE
 } from './compileStyle'
@@ -194,13 +192,13 @@ function install(app) {
 }
 `
   // 拼接导出入口index.js文件内容
-  const indexTemplate = `
-${requires.join('\n  ')}\n
+  const indexTemplate = `\
+${requires.join('\n')}\n
 ${install}
 
 module.exports = {
   install,
-  ${publicComponents.join('\n  ')}
+  ${publicComponents.join(',\n  ')}
 }
 `
   // 拼接css导入语句

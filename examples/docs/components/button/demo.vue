@@ -46,8 +46,8 @@
 export default {
   setup() {
     const handleClick = (params: any) => {
-      console.log(111)
-      console.log(params)
+      // console.log(111)
+      // console.log(params)
     }
     return { handleClick }
   }

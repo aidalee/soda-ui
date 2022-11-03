@@ -1,4 +1,3 @@
-import { CWD } from '../shared/constant'
 import { build } from 'vite'
 import { resolve } from 'path'
 import { copy, ensureFileSync, readdir, removeSync } from 'fs-extra'
@@ -32,7 +31,9 @@ export function compileUMD() {
     const config = getUMDConfig(getSodaConfig())
     build(config)
       .then(() => resolve())
-      .catch(reject)
+      .catch((err=>{
+        reject()
+      }))
   })
 }
 
@@ -40,8 +41,10 @@ export function compileESMBundle() {
   return new Promise<void>((resolve, reject) => {
     const config = getESMBundleConfig(getSodaConfig())
     build(config)
-      .then(() => resolve)
-      .catch(reject)
+      .then(() => resolve())
+      .catch((err)=>{
+        reject()
+      })
   })
 }
 
@@ -72,8 +75,6 @@ export async function compileFile(file: string) {
   // isSFC(file) && (await compileSFC(file))
   // 编译js文件
   isScript(file) && (await compileScriptFile(file))
-  // 编译less文件
-  // isLess(file) && (await compileLess(file))
   // 编译scss文件
   isScss(file) && (await compileScss(file))
   // 如果是目录则进行递归
@@ -83,7 +84,6 @@ export async function compileFile(file: string) {
 export async function compileModule(
   modules: 'umd' | 'commonjs' | 'esm-bundle' | boolean = false
 ) {
-  // console.log('cwd...', CWD)
   if (modules == 'umd') {
     // 打包成umd格式
     await compileUMD()
@@ -102,18 +102,14 @@ export async function compileModule(
   // ES_DIR：varlet-ui/es
   // LIB_DIR：varlet-ui/lib
   const dest = modules === 'commonjs' ? LIB_DIR : ES_DIR
-  // console.log('dest', dest)
   // SRC_DIR：varlet-ui/src，直接将组件的源码目录复制到输出目录
   try {
     await copy(SRC_DIR, dest)
   } catch (error) {
-    console.log(error, 'error')
   }
 
-  // console.log(SRC_DIR, 'SRC_DIR')
   // 读取输出目录赋值给moduleDir变量
   const moduleDir: string[] = await readdir(dest)
-  // console.log('moduleDir...', moduleDir)
   // 遍历打包每个组件
   await Promise.all(
     // 遍历每个组件目录
