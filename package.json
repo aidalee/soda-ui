@@ -1,5 +1,5 @@
 {
-  "version": "1.0.14",
+  "version": "2.0.0-alpha.1667547591486",
   "private": true,
   "scripts": {
     "test": "vitest",
