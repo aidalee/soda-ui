@@ -1,6 +1,6 @@
 {
   "name": "@soda/cli",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "cli of soda",
   "bin": {
     "soda-cli": "./lib/bin.js"
@@ -16,6 +16,11 @@
   ],
   "author": "aidalee",
   "license": "MIT",
+  "files": [
+    "lib",
+    "tsconifg.json",
+    "preset.js"
+  ],
   "dependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.6",

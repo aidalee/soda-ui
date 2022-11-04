@@ -1,12 +1,6 @@
 {
-  "name": "soda-ui",
   "version": "1.0.14",
-  "description": "vue3 mobile ui",
-  "main": "./lib/soda-ui.umd.js",
-  "module": "./lib/soda-ui.mjs",
-  "files": [
-    "lib/*"
-  ],
+  "private": true,
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
@@ -17,9 +11,6 @@
     "prepare": "husky install",
     "release": "node scripts/publish.mjs && soda-cli release"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "eslintConfig": {
     "root": true,
     "ignorePatterns": [

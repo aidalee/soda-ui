@@ -1,7 +1,7 @@
 {
   "name": "@soda/ui",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "A mobile ui with vue",
   "module": "es/index.js",
   "main": "lib/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   ],
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.6",
