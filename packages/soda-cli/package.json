@@ -29,8 +29,8 @@
     "@vue/babel-plugin-jsx": "^1.1.1",
     "@vue/compiler-sfc": "^3.2.41",
     "@vue/runtime-core": "^3.2.41",
-    "chalk": "^5.1.2",
     "commander": "^9.4.1",
+    "conventional-changelog": "^3.1.25",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -42,7 +42,14 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.19.6",
     "@types/babel__core": "^7.1.19",
+    "@types/conventional-changelog": "^3.1.1",
     "@types/fs-extra": "^9.0.13",
-    "@types/node": "^18.7.11"
+    "@types/inquirer": "8.2.2",
+    "@types/node": "^18.7.11",
+    "@types/semver": "^7.3.13",
+    "chalk": "4.1.0",
+    "execa": "5.0.0",
+    "ora": "5.4.0",
+    "semver": "^7.3.8"
   }
 }

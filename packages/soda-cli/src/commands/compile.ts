@@ -1,5 +1,5 @@
-// import ora from 'ora'
-// import logger from '../shared/logger'
+import ora from 'ora'
+import logger from '../shared/logger'
 import { remove } from 'fs-extra'
 import { ES_DIR, LIB_DIR, UMD_DIR } from '../shared/constant'
 import { compileModule } from '../compiler/compileModule'
@@ -11,16 +11,13 @@ export function removeDir() {
 }
 
 export async function runTask(taskName: string, task: () => any) {
-  // const s = ora().start(`Compiling ${taskName}`)
-  console.log(`start ${taskName}`)
+  const s = ora().start(`Compiling ${taskName}`)
   try {
     await task()
-    // s.succeed(`Compilation ${taskName} completed!`)
-    console.log(`Compilation ${taskName} completed!`)
+    s.succeed(`Compilation ${taskName} completed!`)
   } catch (e: any) {
-    // s.fail(`Compilation ${taskName} failed!`)
-    console.log(`Compilation ${taskName} failed!`)
-    // logger.error(e.toString())
+    s.fail(`Compilation ${taskName} failed!`)
+    logger.error(e.toString())
   }
 }
 
