@@ -37,6 +37,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
+    "@soda-f2e/cli": "workspace:*",
+    "@soda-f2e/eslint-config": "workspace:*",
+    "@soda-f2e/stylelint-config": "workspace:*",
     "@testing-library/vue": "^6.6.1",
     "@types/fs-extra": "^9.0.13",
     "@types/jsdom": "^20.0.0",
