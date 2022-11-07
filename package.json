@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0-alpha.1667547591486",
+  "version": "3.0.0-alpha.1667548039762",
   "private": true,
   "scripts": {
     "test": "vitest",
@@ -22,7 +22,7 @@
       "packages/soda-ui/components/test/**"
     ],
     "extends": [
-      "@soda/eslint-config"
+      "@soda-f2e/eslint-config"
     ]
   },
   "dependencies": {
@@ -37,9 +37,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
-    "@soda/cli": "workspace:^1.0.0",
-    "@soda/eslint-config": "workspace:^1.0.0",
-    "@soda/stylelint-config": "workspace:^1.0.0",
     "@testing-library/vue": "^6.6.1",
     "@types/fs-extra": "^9.0.13",
     "@types/jsdom": "^20.0.0",

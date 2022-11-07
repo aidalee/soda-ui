@@ -1,7 +1,7 @@
 module.exports = {
   presets: [
     [
-      '@soda/cli/preset',
+      '@soda-f2e/cli/preset',
       {
         loose: process.env.NODE_ENV === 'compile'
       }
