@@ -1,4 +1,13 @@
-# 3.0.0 (2022-11-08)
+# [5.0.0](https://github.com/aidalee/soda-ui/compare/v3.0.0...v5.0.0) (2022-11-08)
+
+
+### Bug Fixes
+
+* fix ([afbfe6c](https://github.com/aidalee/soda-ui/commit/afbfe6c452d7e222f4a6546455bfc6273e649d68))
+
+
+
+# [3.0.0](https://github.com/aidalee/soda-ui/compare/58912cb9d68ec2db05fdc901b3a8db62d3ab44a0...v3.0.0) (2022-11-08)
 
 
 ### Features
