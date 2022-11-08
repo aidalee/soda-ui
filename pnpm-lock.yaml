@@ -91,6 +91,7 @@ importers:
       '@types/conventional-changelog': ^3.1.1
       '@types/fs-extra': ^9.0.13
       '@types/inquirer': 8.2.2
+      '@types/lodash': ^4.14.188
       '@types/node': ^18.7.11
       '@types/semver': ^7.3.13
       '@typescript-eslint/eslint-plugin': ^5.39.0
@@ -109,7 +110,9 @@ importers:
       eslint-plugin-vue: ^9.6.0
       execa: 5.0.0
       inquirer: 8.2.2
+      lodash: ^4.17.21
       ora: 5.4.0
+      sass: ^1.56.0
       semver: ^7.3.8
       vite: ^3.0.7
       vue: ^3.2.37
@@ -133,7 +136,7 @@ importers:
       eslint-plugin-import: 2.26.0_46x2qgupc2xqbviuruvkyty2ki
       eslint-plugin-vue: 9.6.0
       inquirer: 8.2.2
-      vite: 3.1.6
+      vite: 3.1.6_sass@1.56.0
       vue: 3.2.40
     devDependencies:
       '@babel/plugin-transform-runtime': 7.19.6_@babel+core@7.19.6
@@ -141,11 +144,14 @@ importers:
       '@types/conventional-changelog': 3.1.1
       '@types/fs-extra': 9.0.13
       '@types/inquirer': 8.2.2
+      '@types/lodash': 4.14.188
       '@types/node': 18.8.3
       '@types/semver': 7.3.13
       chalk: 4.1.0
       execa: 5.0.0
+      lodash: 4.17.21
       ora: 5.4.0
+      sass: 1.56.0
       semver: 7.3.8
 
   packages/soda-eslint-config:
@@ -2076,7 +2082,7 @@ packages:
       '@babel/plugin-syntax-import-meta': 7.10.4_@babel+core@7.19.6
       '@babel/plugin-transform-typescript': 7.19.3_@babel+core@7.19.6
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.19.6
-      vite: 3.1.6
+      vite: 3.1.6_sass@1.56.0
       vue: 3.2.40
     transitivePeerDependencies:
       - supports-color
@@ -2089,7 +2095,7 @@ packages:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.1.6
+      vite: 3.1.6_sass@1.56.0
       vue: 3.2.40
 
   /@vitest/coverage-istanbul/0.24.1:
@@ -4371,7 +4377,6 @@ packages:
 
   /immutable/4.1.0:
     resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
-    dev: true
 
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -5891,7 +5896,6 @@ packages:
       chokidar: 3.5.3
       immutable: 4.1.0
       source-map-js: 1.0.2
-    dev: true
 
   /scss-tokenizer/0.4.3:
     resolution: {integrity: sha512-raKLgf1LI5QMQnG+RxHz6oK0sL3x3I4FN2UDLqgLOGO8hodECNnNh5BXn7fAyBxrA8zVzdQizQ6XjNJQ+uBwMw==}
@@ -6578,7 +6582,6 @@ packages:
       sass: 1.56.0
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /vitest/0.19.1:
     resolution: {integrity: sha512-E/ZXpFMUahn731wzhMBNzWRp4mGgiZFT0xdHa32cbNO0CSaHpE9hTfteEU247Gi2Dula8uXo5vvrNB6dtszmQA==}
