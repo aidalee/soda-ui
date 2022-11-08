@@ -1,8 +1,8 @@
-@import '../../styles/mixins/variables';
-@import '../../styles/mixins/color';
-@import '../../styles/mixins/font';
-@import '../../styles/mixins/corner';
-@import '../../styles/mixins/mixin';
+@import '../styles/mixins/variables';
+@import '../styles/mixins/color';
+@import '../styles/mixins/font';
+@import '../styles/mixins/corner';
+@import '../styles/mixins/mixin';
 
 $so-btn-padding-md: var(--so-btn-padding, 8px 10px);
 $so-btn-padding-sm: var(--so-btn-padding-sm, 6px 8px);
