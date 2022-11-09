@@ -5,7 +5,7 @@ import useList from './use-list'
 import './list.scss'
 
 export default defineComponent({
-  name: 'List',
+  name: 'SoList',
   props: listProps,
   setup(props: ListProps, ctx: SetupContext) {
     const { title } = toRefs(props)
