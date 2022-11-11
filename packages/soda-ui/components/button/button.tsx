@@ -33,9 +33,8 @@ export default defineComponent({
         borderWidth: 0
       }
     }
-    type MyFunc = (e: MouseEvent) => void
 
-    const onClick: MyFunc = (e: MouseEvent) => {
+    const onClick = (e: MouseEvent) => {
       if (loading.value) {
         return
       }
