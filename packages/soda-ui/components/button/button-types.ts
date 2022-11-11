@@ -14,14 +14,14 @@ export type IButtonType =
   | 'error'
   | 'default'
   | 'text'
-export type IButtonSize = 'lg' | 'md' | 'sm'
+export type IButtonSize = 'large' | 'middle' | 'smalll'
 export type IButtonShape = 'round' | 'circle'
 export type IButtonGroupFlexRank = 'two' | 'three'
 
 export const buttonProps = {
   size: {
     type: String as PropType<IButtonSize>,
-    default: 'md'
+    default: 'middle'
   },
   type: {
     type: String as PropType<IButtonType>,

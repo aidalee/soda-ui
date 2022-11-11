@@ -4,9 +4,9 @@
 @import '../styles/mixins/corner';
 @import '../styles/mixins/mixin';
 
-$so-btn-padding-md: var(--so-btn-padding, 8px 10px);
-$so-btn-padding-sm: var(--so-btn-padding-sm, 6px 8px);
-$so-btn-padding-lg: var(--so-btn-padding-lg, 10px 12px);
+$so-btn-padding-middle: var(--so-btn-padding, 8px 10px);
+$so-btn-padding-small: var(--so-btn-padding-sm, 6px 8px);
+$so-btn-padding-large: var(--so-btn-padding-lg, 10px 12px);
 
 .so-button {
   outline: 0;
@@ -20,29 +20,29 @@ $so-btn-padding-lg: var(--so-btn-padding-lg, 10px 12px);
   align-items: center;
   justify-content: center;
   width: 100%;
-  &--sm {
+  &--small {
     width: auto;
     height: 24px;
     @include button-size(
-      $so-btn-padding-sm,
+      $so-btn-padding-small,
       $so-font-size-sm,
       $so-btn-border-radius-sm
     );
   }
 
-  &--md {
+  &--middle {
     height: 32px;
     @include button-size(
-      $so-btn-padding-md,
+      $so-btn-padding-middle,
       $so-font-size-md,
       $so-btn-border-radius
     );
   }
 
-  &--lg {
+  &--large {
     height: 40px;
     @include button-size(
-      $so-btn-padding-lg,
+      $so-btn-padding-large,
       $so-font-size-lg,
       $so-btn-border-radius-lg
     );

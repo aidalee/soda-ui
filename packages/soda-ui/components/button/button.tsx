@@ -1,48 +1,45 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { defineComponent, toRefs } from 'vue'
 import type { SetupContext } from 'vue'
-import { ButtonProps, buttonProps } from './button-types'
+// import { ButtonProps, buttonProps } from './button-types'
+import { props, ButtonProps } from './props'
 import useButton from './use-button'
 import './button.scss'
 import { throttle } from 'throttle-debounce'
-// import { Icon } from '../../icon';
 
 export default defineComponent({
   // eslint-disable-next-line vue/no-reserved-component-names
   name: 'SoButton',
-  props: buttonProps,
+  props: props,
   emits: ['click'],
   setup(props: ButtonProps, ctx: SetupContext) {
-    const { disabled, loading, delay, style, color } = toRefs(props)
+    const { disabled, loading, delay, color } = toRefs(props)
     const { classes, iconClass } = useButton(props, ctx)
 
     let _throttle: () => void
 
-    if (delay.value) {
+    if (delay?.value) {
       _throttle = throttle(delay.value, () => {
         ctx.emit('click', '触发点击延迟')
       })
     }
 
-    let styleObj = style.value || {}
+    let styleObj = {}
 
     if (color?.value) {
-      styleObj = Object.assign(style, {
+      styleObj = {
         background: color.value,
         color: '#fff',
         borderWidth: 0
-      })
+      }
     }
+    type MyFunc = (e: MouseEvent) => void
 
-    const handleClick = (e: MouseEvent) => {
+    const onClick: MyFunc = (e: MouseEvent) => {
       if (loading.value) {
         return
       }
-      if (_throttle) {
-        _throttle()
-      } else {
-        ctx.emit('click', '触发点击')
-      }
+      ctx.emit('click', e)
     }
 
     return () => {
@@ -51,7 +48,7 @@ export default defineComponent({
           style={styleObj}
           class={classes.value}
           disabled={disabled.value}
-          onClick={handleClick}
+          onClick={onClick}
         >
           {/* {icon.value && <Icon name={icon.value} size="14" class={iconClass.value} />} */}
           <span class="button-content">{ctx.slots.default?.()}</span>

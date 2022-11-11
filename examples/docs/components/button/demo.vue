@@ -1,7 +1,7 @@
 <template>
   <demo-block title="按钮类型">
-    <SoButton type="primary"> SoButton </SoButton>
-    <Button type="primary"> Button </Button>
+    <so-button type="primary"> SoButton </so-button>
+    <so-Button type="primary"> Button </so-Button>
 
     <so-button type="primary"> primary </so-button>
     <so-button type="success"> success </so-button>
@@ -46,8 +46,7 @@
 export default {
   setup() {
     const handleClick = (params: any) => {
-      // console.log(111)
-      // console.log(params)
+      alert(params)
     }
     return { handleClick }
   }
