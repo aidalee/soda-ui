@@ -1,6 +1,6 @@
 <template>
   <demo-block>
-    <so-list title="测试数据列表">
+    <so-list title="测试数据列表" title-color="#f00">
       <so-list-item title="list1" value="查看">
         <template #inlineDesc>
           <span>descdescdescdescdescdescdescdescdescdesc</span>

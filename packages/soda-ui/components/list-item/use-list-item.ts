@@ -1,14 +1,13 @@
 import { computed } from 'vue'
 import type { SetupContext } from 'vue'
-import { ListProps, UseListReturnType } from './props'
+import { ListItemProps, UseListItemReturnType } from './props'
 import { useNamespace } from '../hooks/use-namespace'
-import { isString } from 'lodash'
 
 export default function useList(
-  props: ListProps,
+  props: ListItemProps,
   ctx: SetupContext
-): UseListReturnType {
-  const ns = useNamespace('list')
+): UseListItemReturnType {
+  const ns = useNamespace('list-item')
 
   // const hasContent = computed(() => ctx.slots.default)
 

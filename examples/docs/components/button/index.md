@@ -32,9 +32,9 @@
 有 `lg`、`md`、`sm`三种类型，默认为`md`。
 
 ```html
-<so-button type="primary" size="lg">large</so-button>
+<so-button type="primary" size="large">large</so-button>
 <so-button type="success">middle</so-button>
-<so-button size="sm" shape="circle">small</so-button>
+<so-button size="small" shape="circle">small</so-button>
 ```
 
 ### 禁用状态
@@ -75,6 +75,6 @@
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
 | type | 类型 | _string_ | `primary` `success` `warning` `danger` `default` `text` | `default` |
-| size | 尺寸 | _string_ | `lg` `md` `sm` | `md` |
+| size | 尺寸 | _string_ | `large` `middle` `small` | `middle` |
 | color | 自定义按钮颜色，支持 `linear-gradient` 渐变色 | _string_ | - | - |
 | delay | 延迟点击时间，单位 ms | _number_ | - | - |

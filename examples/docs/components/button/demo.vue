@@ -1,8 +1,5 @@
 <template>
   <demo-block title="按钮类型">
-    <so-button type="primary"> SoButton </so-button>
-    <so-Button type="primary"> Button </so-Button>
-
     <so-button type="primary"> primary </so-button>
     <so-button type="success"> success </so-button>
     <so-button type="warning"> warning </so-button>
@@ -14,9 +11,9 @@
     <so-button type="primary" shape="circle"> circle </so-button>
   </demo-block>
   <demo-block title="按钮大小">
-    <so-button type="primary" size="lg"> large </so-button>
+    <so-button type="primary" size="large"> large </so-button>
     <so-button type="success"> middle </so-button>
-    <so-button size="sm" shape="circle"> small </so-button>
+    <so-button size="small" shape="circle"> small </so-button>
   </demo-block>
   <demo-block title="禁用状态">
     <so-button type="primary" disabled> disabled </so-button>

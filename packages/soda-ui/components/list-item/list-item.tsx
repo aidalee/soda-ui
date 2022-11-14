@@ -1,16 +1,20 @@
 import { defineComponent, toRefs } from 'vue'
 import type { SetupContext } from 'vue'
-import { ListItemProps, listItemProps } from './list-item-types'
+import { ListItemProps, props } from './props'
+import useListItem from './use-list-item'
+import './list-item.scss'
 
 export default defineComponent({
-  name: 'ListItem',
-  props: listItemProps,
+  name: 'SoListItem',
+  props: props,
   setup(props: ListItemProps, ctx: SetupContext) {
     const { title, value, inlineDesc, isLink, link } = toRefs(props)
 
+    const { classes } = useListItem(props, ctx)
+
     return () => {
       return (
-        <div class="so-list-item">
+        <div class={classes.value}>
           <div class="so-list-item__left">
             <div class="so-list-item__title" v-show="title || ctx.slots.title">
               {title.value || ctx.slots.title?.()}

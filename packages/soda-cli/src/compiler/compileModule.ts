@@ -121,7 +121,6 @@ export async function compileModule(
       return isDir(file) ? compileDir(file) : null
     })
   )
-  console.log(11)
   // 遍历package目录 找到所有存在['index.vue', 'index.tsx', 'index.ts', 'index.jsx', 'index.js']这些文件之一的目录
   const publicDirs = await getPublicDirs()
   // 打包（打包主入口？。）

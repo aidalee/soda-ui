@@ -5,7 +5,13 @@ export class VarComponent {
   static install(app: App): void
 }
 
-export type Type = 'primary' | 'success' | 'warning' | 'error' | 'default'
+export type Type =
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'default'
+  | 'text'
 
 export type Size = 'large' | 'middle' | 'small'
 

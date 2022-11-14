@@ -1,6 +1,6 @@
 import { ExtractPropTypes, PropType, ComputedRef } from 'vue'
 
-export const listProps = {
+export const props = {
   title: {
     type: String,
     default: ''
@@ -19,14 +19,12 @@ export const listProps = {
     type: String,
     default: ''
   },
-  listStyle: {
-    type: Object,
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    default: () => {}
+  style: {
+    type: Object
   }
 } as const
 
-export type ListProps = ExtractPropTypes<typeof listProps>
+export type ListProps = ExtractPropTypes<typeof props>
 
 export interface UseListReturnType {
   classes: ComputedRef<{

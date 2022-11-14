@@ -1,6 +1,6 @@
 import { ExtractPropTypes, ComputedRef, PropType } from 'vue'
 
-export const listItemProps = {
+export const props = {
   // 标题
   title: {
     type: String,
@@ -30,7 +30,7 @@ export const listItemProps = {
   }
 } as const
 
-export type ListItemProps = ExtractPropTypes<typeof listItemProps>
+export type ListItemProps = ExtractPropTypes<typeof props>
 
 export interface UseListItemReturnType {
   classes: ComputedRef<{

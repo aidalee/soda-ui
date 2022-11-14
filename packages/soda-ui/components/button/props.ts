@@ -2,7 +2,9 @@ import type { PropType } from 'vue'
 import type { ExtractPropTypes, ComputedRef } from 'vue'
 
 function typeValidator(type: string): boolean {
-  return ['primary', 'success', 'warning', 'error', 'default'].includes(type)
+  return ['primary', 'success', 'warning', 'error', 'default', 'text'].includes(
+    type
+  )
 }
 
 function sizeValidator(size: string): boolean {
@@ -16,7 +18,7 @@ function shapeValidator(shape: string): boolean {
 export const props = {
   type: {
     type: String as PropType<
-      'primary' | 'success' | 'warning' | 'error' | 'default'
+      'primary' | 'success' | 'warning' | 'error' | 'default' | 'text'
     >,
     default: 'default',
     validator: typeValidator

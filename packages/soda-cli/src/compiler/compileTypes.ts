@@ -16,7 +16,8 @@ export * from '${relative(moduleDir, TYPES_DIR)}'
 
 export async function compileTypes() {
   const sodaConfig = getSodaConfig()
-  const namespace = get(sodaConfig, 'namespace')
+  // const namespace = get(sodaConfig, 'namespace') // var=>soda
+  const namespace = 'so'
   const { name } = require(UI_PACKAGE_JSON)
   await ensureDir(TYPES_DIR)
 
@@ -40,7 +41,6 @@ export async function compileTypes() {
       )
     }
   })
-
   const globalDeclares = `\
 declare module 'vue' {
   export interface GlobalComponents {
