@@ -25,11 +25,11 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class={classes.value}>
+        <div>
           <div class="so-list__title" v-show="title" style={styleobj}>
             {title.value || slots.title?.()}
           </div>
-          {slots.default?.()}
+          <div class={classes.value}>{slots.default?.()}</div>
         </div>
       )
     }

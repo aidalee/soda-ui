@@ -28,3 +28,42 @@
     border-color: $border;
   }
 }
+
+@mixin top-line($color: #d7d7db, $left: 0, $right: 0) {
+  content: " ";
+  position: absolute;
+  left: $left;
+  top: 0;
+  right: $right;
+  height: 1px;
+  border-top: 1px solid $color;
+  color: $color;
+  transform-origin: 0 0;
+  transform: scaleY(.5);
+}
+
+@mixin bottom-line($color: #d7d7db, $left: 0, $right: 0) {
+  content: " ";
+  position: absolute;
+  left: $left;
+  bottom: 0;
+  right: $right;
+  height: 1px;
+  border-bottom: 1px solid $color;
+  color: $color;
+  transform-origin: 0 100%;
+  transform: scaleY(.5);
+}
+
+@mixin left-line($color: #d7d7db) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid $color;
+  color: $color;
+  transform-origin: 0 0;
+  transform: scaleX(.5);
+}

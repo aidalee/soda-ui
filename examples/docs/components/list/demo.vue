@@ -8,6 +8,10 @@
       </so-list-item>
       <so-list-item title="list2" value="跳转" inline-desc="desc1 desc2">
       </so-list-item>
+      <so-list-item title="list2" value="跳转" inline-desc="desc1 desc2">
+      </so-list-item>
+      <so-list-item title="list2" value="跳转" inline-desc="desc1 desc2">
+      </so-list-item>
     </so-list>
   </demo-block>
 </template>

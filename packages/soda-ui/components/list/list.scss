@@ -1,9 +1,18 @@
+@import '../styles/mixins/mixin';
+
 .so-list {
   /* your component style */
   // background-color: #F0F1F2;
+  position: relative;
   &__title {
     font-size: 16px;
     color: #333;
     padding: 12px 16px;
+  }
+  &::before {
+    @include top-line
+  }
+  &::after {
+    @include bottom-line
   }
 }
