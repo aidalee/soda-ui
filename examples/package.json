@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@soda-f2e/icons": "workspace:^1.0.0",
     "@soda-f2e/ui": "workspace:^5.0.0"
   }
 }

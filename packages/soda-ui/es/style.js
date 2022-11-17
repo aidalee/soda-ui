@@ -1,4 +1,5 @@
 import './button/style'
+import './icon/style'
 import './list/style'
 import './list-item/style'
 import './tag/style'

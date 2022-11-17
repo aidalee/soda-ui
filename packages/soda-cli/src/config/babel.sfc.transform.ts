@@ -7,11 +7,12 @@ module.exports = declare(() => ({
       test: (file: string) => {
         if (/\.vue$/.test(file)) {
           const code = readFileSync(file, 'utf8')
-          return code.includes("lang='ts'") || code.includes("lang='ts'")
+          return code.includes('lang="ts"') || code.includes("lang='ts'")
         }
+
         return false
       },
-      plugins: ['@babel/plugin-transform-typescript']
-    }
-  ]
+      plugins: ['@babel/plugin-transform-typescript'],
+    },
+  ],
 }))

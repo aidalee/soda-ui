@@ -9,8 +9,3 @@ declare module '*.md' {
   const Component: ComponentOptions
   export default Component
 }
-// declare module '*.vue' {
-//   import { defineComponent } from 'vue'
-//   const component: ReturnType<typeof defineComponent>
-//   export default component
-// }

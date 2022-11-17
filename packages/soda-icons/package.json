@@ -1,0 +1,16 @@
+{
+  "name": "@soda-f2e/icons",
+  "version": "1.0.0",
+  "description": "soda icons",
+  "main": "./src/config.js",
+  "types": "./src/config.d.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

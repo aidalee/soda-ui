@@ -1,0 +1,27 @@
+{
+  "name": "@soda-f2e/utils",
+  "version": "1.0.0",
+  "description": "utils of soda",
+  "module": "es/index.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "dev:cjs": "tsc -p tsconfig.cjs.json --watch",
+    "build": "tsc && tsc -p tsconfig.cjs.json"
+  },
+  "keywords": [
+    "utils",
+    "soda"
+  ],
+  "files": [
+    "lib",
+    "es",
+    "tsconfig.json",
+    "CHANGELOG.md"
+  ],
+  "author": "aidalee",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}

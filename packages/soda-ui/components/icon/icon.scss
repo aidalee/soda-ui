@@ -1,0 +1,10 @@
+@import '../../node_modules/@soda-f2e/icons/src/encode-woff2.scss';
+
+.so-icon {
+  &__image {
+    display: block;
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+  }
+}

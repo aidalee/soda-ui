@@ -1,0 +1,12 @@
+@import './common.scss';
+
+@font-face {
+  font-weight: normal;
+  font-family: 'so-icon';
+  font-style: normal;
+  font-display: auto;
+  src: url('//at.alicdn.com/t/c/font_3773502_we6dzol37j.woff2?t=1668566700852') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3773502_we6dzol37j.woff?t=1668566700852') format('woff'),
+       url('//at.alicdn.com/t/c/font_3773502_we6dzol37j.ttf?t=1668566700852') format('truetype'),
+       url('//at.alicdn.com/t/c/font_3773502_we6dzol37j.svg?t=1668566700852#iconfont') format('svg');
+}

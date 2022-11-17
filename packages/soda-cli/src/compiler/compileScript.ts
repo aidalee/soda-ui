@@ -65,6 +65,7 @@ export async function compileScript(script: string, file: string) {
   if (modules === 'commonjs') {
     // script = moduleCompatible(script)
   }
+  
   let { code } = (await transformAsync(script, {
     filename: file // js内容对应的文件名，babel插件会用到
   })) as BabelFileResult

@@ -13,6 +13,7 @@ import {
   compileCommonJSEntry,
   compileScriptFile
 } from './compileScript'
+import { compileSFC } from './compileSFC'
 import { compileScss } from './compileStyle'
 import {
   getPublicDirs,
@@ -72,7 +73,7 @@ export async function compileDir(dir: string) {
 
 export async function compileFile(file: string) {
   // 编译vue文件
-  // isSFC(file) && (await compileSFC(file))
+  isSFC(file) && (await compileSFC(file))
   // 编译js文件
   isScript(file) && (await compileScriptFile(file))
   // 编译scss文件
