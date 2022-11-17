@@ -36,7 +36,7 @@
     <so-button type="text"> text1 </so-button>
     <so-button type="text"> text2 </so-button>
     <so-button type="text"> text3 </so-button>
-    <i class="so-icon so-icon-add" style="font-size: 28px"></i>
+    <so-icon name="so-icon-add" style="font-size: 28px"></so-icon>
   </demo-block>
 </template>
 

@@ -2,6 +2,7 @@
   <component
     :is="isURL(name) ? 'img' : 'i'"
     :class="classes"
+    class="so-icon-add"
     :src="isURL(name) ? nextName : null"
     :style="{
       color,
@@ -15,8 +16,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, watch, ref, nextTick, computed, Ref } from 'vue'
-// import type { Ref } from 'vue'
+import { defineComponent, watch, ref, nextTick, computed } from 'vue'
+import type { Ref } from 'vue'
 import { props } from './props'
 import { isURL, toNumber } from '@soda-f2e/utils'
 import { toSizeUnit } from '../utils/elements'
@@ -34,7 +35,7 @@ export default defineComponent({
       newName: string | undefined,
       oldName: string | undefined
     ) => {
-      const { transition } = props
+      const { transition, name } = props
       if (oldName == null || toNumber(transition) === 0) {
         nextName.value = newName
         return

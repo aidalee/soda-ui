@@ -79,12 +79,6 @@ importers:
       vitest: 0.24.1_happy-dom@7.6.7
       vue-tsc: 0.39.5
 
-  examples:
-    specifiers:
-      '@soda-f2e/ui': workspace:^5.0.0
-    dependencies:
-      '@soda-f2e/ui': link:../packages/soda-ui
-
   packages/soda-cli:
     specifiers:
       '@babel/cli': ^7.19.3
@@ -179,6 +173,9 @@ importers:
       eslint-config-prettier: 8.5.0
       eslint-plugin-import: 2.26.0_46x2qgupc2xqbviuruvkyty2ki
       eslint-plugin-vue: 9.6.0
+
+  packages/soda-icons:
+    specifiers: {}
 
   packages/soda-stylelint-config:
     specifiers:
@@ -2125,7 +2122,7 @@ packages:
       '@babel/plugin-syntax-import-meta': 7.10.4_@babel+core@7.19.6
       '@babel/plugin-transform-typescript': 7.19.3_@babel+core@7.19.6
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.19.6
-      vite: 3.1.6_sass@1.56.0
+      vite: 3.1.6
       vue: 3.2.40
     transitivePeerDependencies:
       - supports-color
@@ -2138,7 +2135,7 @@ packages:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.1.6_sass@1.56.0
+      vite: 3.1.6
       vue: 3.2.40
 
   /@vitest/coverage-istanbul/0.24.1_happy-dom@7.6.7:
