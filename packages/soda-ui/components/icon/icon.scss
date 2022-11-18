@@ -7,4 +7,7 @@
     height: 1em;
     object-fit: contain;
   }
+  &--shrinking {
+    transform: scale(0);
+  }
 }

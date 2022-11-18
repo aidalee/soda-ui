@@ -10,13 +10,13 @@ export const props = {
   color: {
     type: String
   },
-  namespace: {
-    type: String,
-    default: 'so-icon'
-  },
   transition: {
     type: [Number, String],
     default: 0
+  },
+  classPrefix: {
+    type: String,
+    default: 'so-icon'
   },
   onClick: {
     type: Function as PropType<(event: Event) => void>

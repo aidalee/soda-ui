@@ -10,7 +10,8 @@
   "files": [
     "lib",
     "es",
-    "umd"
+    "umd",
+    "types"
   ],
   "sideEffects": [
     "es/**/style/*",

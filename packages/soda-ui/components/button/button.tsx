@@ -8,7 +8,6 @@ import './button.scss'
 import { throttle } from 'throttle-debounce'
 
 export default defineComponent({
-  // eslint-disable-next-line vue/no-reserved-component-names
   name: 'SoButton',
   props: props,
   emits: ['click'],

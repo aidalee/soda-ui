@@ -20,6 +20,11 @@ const routes = [
         path: 'list',
         name: 'doc-list',
         component: () => import('./docs/components/list/index.md')
+      },
+      {
+        path: 'icon',
+        name: 'doc-icon',
+        component: () => import('./docs/components/icon/index.md')
       }
     ]
   },
@@ -37,6 +42,11 @@ const routes = [
         path: 'list',
         name: 'demo-list',
         component: () => import('./docs/components/list/demo.vue')
+      },
+      {
+        path: 'icon',
+        name: 'demo-icon',
+        component: () => import('./docs/components/icon/demo.vue')
       }
     ]
   }

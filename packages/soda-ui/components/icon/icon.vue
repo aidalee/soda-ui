@@ -1,8 +1,7 @@
 <template>
   <component
     :is="isURL(name) ? 'img' : 'i'"
-    :class="classes"
-    class="so-icon-add"
+    :class="[...classes, shrinking ? [ns.m('shrinking')] : '']"
     :src="isURL(name) ? nextName : null"
     :style="{
       color,
@@ -16,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, watch, ref, nextTick, computed } from 'vue'
+import { defineComponent, watch, ref, nextTick, computed, toRefs } from 'vue'
 import type { Ref } from 'vue'
 import { props } from './props'
 import { isURL, toNumber } from '@soda-f2e/utils'
@@ -27,7 +26,8 @@ const ns = useNamespace('icon')
 export default defineComponent({
   name: 'SoIcon',
   props,
-  setup(props) {
+  emits: ['click'],
+  setup(props, ctx) {
     const nextName: Ref<string | undefined> = ref('')
     const shrinking: Ref<boolean> = ref(false)
 
@@ -35,7 +35,7 @@ export default defineComponent({
       newName: string | undefined,
       oldName: string | undefined
     ) => {
-      const { transition, name } = props
+      const { transition } = props
       if (oldName == null || toNumber(transition) === 0) {
         nextName.value = newName
         return
@@ -48,10 +48,21 @@ export default defineComponent({
         shrinking.value = false
       }, toNumber(transition))
     }
+    const onClick = () => {
+      ctx.emit('click')
+    }
 
-    const classes = computed(() => ({
-      [ns.b()]: true
-    }))
+    const classes = computed(() => {
+      if (!isURL(props.name)) {
+        return [
+          [ns.b()],
+          [props.classPrefix],
+          `${props.classPrefix}-${props.name}`
+        ]
+      } else {
+        return [ns.b()]
+      }
+    })
 
     watch(() => props.name, handleNameChange, { immediate: true })
 
@@ -62,7 +73,8 @@ export default defineComponent({
       shrinking,
       isURL,
       toNumber,
-      toSizeUnit
+      toSizeUnit,
+      onClick
     }
   }
 })

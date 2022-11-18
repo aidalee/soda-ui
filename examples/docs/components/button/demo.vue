@@ -36,11 +36,11 @@
     <so-button type="text"> text1 </so-button>
     <so-button type="text"> text2 </so-button>
     <so-button type="text"> text3 </so-button>
-    <so-icon name="so-icon-add" style="font-size: 28px"></so-icon>
   </demo-block>
 </template>
 
 <script lang="ts">
+import { ref } from 'vue'
 export default {
   setup() {
     const handleClick = (params: any) => {
