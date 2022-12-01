@@ -48,7 +48,6 @@ export default defineComponent({
           disabled={disabled.value}
           onClick={onClick}
         >
-          {/* {icon.value && <Icon name={icon.value} size="14" class={iconClass.value} />} */}
           <span class="button-content">{ctx.slots.default?.()}</span>
         </button>
       )

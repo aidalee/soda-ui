@@ -6,7 +6,6 @@
     "moduleResolution": "Node",
     "strict": true,
     "jsx": "preserve",
-    "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
@@ -20,12 +19,10 @@
     "src/**/*.vue",
     "scripts/**/*.ts",
     "packages/soda-ui/components/**/*.ts",
-    "packages/soda-ui/components/**/**/*.ts",
-    "packages/soda-ui/components/**/**/*.d.ts",
-    "packages/soda-ui/components/**/**/*.tsx",
-    "packages/soda-ui/components/**/**/*.tsx",
-    "packages/soda-ui/components/**/**/*.ts",
-    "packages/soda-ui/components/**/**/*.vue"
+    "packages/soda-ui/components/**/*.ts",
+    "packages/soda-ui/components/**/*.d.ts",
+    "packages/soda-ui/components/**/*.tsx",
+    "packages/soda-ui/components/**/*.vue"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

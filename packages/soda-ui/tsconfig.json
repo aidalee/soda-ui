@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "downlevelIteration": true,
-    "declaration": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
-    "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
-    "isolatedModules": true
+    "module": "ESNext", // 不设 onClick={onClick}报红色
+    // "moduleResolution": "Node", // 设了 onClick={onClick}报红色
+    // "strict": true, //  设了tsx全红色
+    "jsx": "preserve", // 不设置tsx文件会报红色提醒 无法使用 JSX，除非提供了 "--jsx" 标志
+    // 下面这几项不设置目前无影响
+    // "isolatedModules": true,
+    // "downlevelIteration": true,
+    // "declaration": true,
+    // "skipLibCheck": true,
+    // "esModuleInterop": true,
+    // "lib": ["esnext", "dom"],
+    // "allowSyntheticDefaultImports": true
   }
 }
