@@ -1,6 +1,6 @@
 {
   "name": "@soda-f2e/eslint-config",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "eslint config of soda",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@soda-f2e/utils",
-  "version": "1.0.0",
+  "version": "5.0.1",
   "description": "utils of soda",
   "module": "es/index.js",
   "main": "lib/index.js",

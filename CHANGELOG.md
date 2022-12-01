@@ -1,3 +1,19 @@
+## [5.0.1](https://github.com/aidalee/soda-ui/compare/v5.0.0...v5.0.1) (2022-12-01)
+
+
+### Bug Fixes
+
+* list & list item 样式调整 ([2530d6a](https://github.com/aidalee/soda-ui/commit/2530d6a5a8b882e0cb320c95f283d99bcc5817f8))
+
+
+### Features
+
+* 表单input组件初始 ([0ee5446](https://github.com/aidalee/soda-ui/commit/0ee5446efc2b4281895c74a5a64a93550e96709c))
+* 图标组件完善 ([c71be38](https://github.com/aidalee/soda-ui/commit/c71be38fed8ecec452f707d940327ff39a2e1d19))
+* icon组件调试 ([17d69ab](https://github.com/aidalee/soda-ui/commit/17d69aba2b2e40583f3ab8972bf5509811d11476))
+
+
+
 # [5.0.0](https://github.com/aidalee/soda-ui/compare/v3.0.0...v5.0.0) (2022-11-08)
 
 

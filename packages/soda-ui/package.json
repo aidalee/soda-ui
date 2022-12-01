@@ -1,6 +1,6 @@
 {
   "name": "@soda-f2e/ui",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "A mobile ui with vue",
   "module": "es/index.js",
   "main": "lib/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@soda-f2e/stylelint-config",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "stylelint config of soda",
   "main": "index.js",
   "keywords": [
