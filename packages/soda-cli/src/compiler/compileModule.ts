@@ -32,9 +32,9 @@ export function compileUMD() {
     const config = getUMDConfig(getSodaConfig())
     build(config)
       .then(() => resolve())
-      .catch((err=>{
+      .catch(err => {
         reject()
-      }))
+      })
   })
 }
 
@@ -43,7 +43,8 @@ export function compileESMBundle() {
     const config = getESMBundleConfig(getSodaConfig())
     build(config)
       .then(() => resolve())
-      .catch((err)=>{
+      .catch(err => {
+        console.log(err, 'error====')
         reject()
       })
   })
@@ -106,8 +107,7 @@ export async function compileModule(
   // SRC_DIR：varlet-ui/src，直接将组件的源码目录复制到输出目录
   try {
     await copy(SRC_DIR, dest)
-  } catch (error) {
-  }
+  } catch (error) {}
 
   // 读取输出目录赋值给moduleDir变量
   const moduleDir: string[] = await readdir(dest)

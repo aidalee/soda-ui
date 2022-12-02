@@ -29,14 +29,14 @@
     "@babel/helper-plugin-utils": "^7.19.0",
     "@babel/preset-env": "^7.19.4",
     "@babel/preset-typescript": "^7.18.6",
-    "@soda-f2e/icons": "workspace:^1.0.0",
-    "@soda-f2e/utils": "workspace:^1.0.0",
-    "@types/node": "^18.7.11",
+    "@soda-f2e/icons": "workspace:^5.0.0",
+    "@soda-f2e/utils": "workspace:^5.0.0",
     "throttle-debounce": "^5.0.0"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.19",
     "@types/lodash": "^4.14.188",
+    "@types/node": "18.7.18",
     "@types/throttle-debounce": "^5.0.0",
     "@vue/runtime-core": "^3.2.41",
     "lodash": "^4.17.21",
