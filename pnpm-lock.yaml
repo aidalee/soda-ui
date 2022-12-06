@@ -81,12 +81,6 @@ importers:
       vitest: 0.24.1_happy-dom@7.6.7
       vue-tsc: 0.39.5_typescript@4.8.4
 
-  examples:
-    specifiers:
-      '@soda-f2e/ui': workspace:^5.0.1
-    dependencies:
-      '@soda-f2e/ui': link:../packages/soda-ui
-
   packages/soda-cli:
     specifiers:
       '@babel/cli': ^7.19.3
@@ -200,8 +194,8 @@ importers:
       '@babel/helper-plugin-utils': ^7.19.0
       '@babel/preset-env': ^7.19.4
       '@babel/preset-typescript': ^7.18.6
-      '@soda-f2e/icons': workspace:^5.0.0
-      '@soda-f2e/utils': workspace:^5.0.0
+      '@soda-f2e/icons': workspace:^5.0.1
+      '@soda-f2e/utils': workspace:^5.0.1
       '@types/babel__core': ^7.1.19
       '@types/lodash': ^4.14.188
       '@types/node': 18.7.18

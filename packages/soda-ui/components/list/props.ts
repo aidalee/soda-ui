@@ -1,4 +1,5 @@
 import { ExtractPropTypes, PropType, ComputedRef } from 'vue'
+export type LabelAlign = 'left' | 'center' | 'right'
 
 export const props = {
   title: {
@@ -16,6 +17,10 @@ export const props = {
   },
   // 为子元素设定统一对齐方式
   labelAlign: {
+    type: String as PropType<LabelAlign>,
+    default: ''
+  },
+  labelMarginRight: {
     type: String,
     default: ''
   },

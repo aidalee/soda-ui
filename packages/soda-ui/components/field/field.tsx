@@ -2,6 +2,7 @@ import { defineComponent } from 'vue'
 import ListItem from '../list-item/list-item'
 import { fieldProps } from './props'
 import { useNamespace } from '../hooks/use-namespace'
+import './field.scss'
 const ns = useNamespace('field')
 export default defineComponent({
   name: 'SoField',
@@ -69,6 +70,7 @@ export default defineComponent({
         <list-item
           title={renderLabel()}
           value={renderInput()}
+          customClass={ns.b()}
         > 
         </list-item>
       )

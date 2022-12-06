@@ -27,6 +27,10 @@ export const props = {
       // eslint-disable-next-line @typescript-eslint/ban-types
       string | { path: string; params?: {}; query?: {} }
     >
+  },
+  customClass: {
+    type: String,
+    default: ''
   }
 } as const
 

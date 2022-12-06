@@ -1,0 +1,9 @@
+.so-field {
+  &__input {
+    border: 0;
+    user-select: auto;
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -60,3 +60,24 @@ export const toSizeUnit = (val: unknown) => {
 
   return `${toPxNum(val)}px`
 }
+
+export const getParentProp = (instance, name: string) => {
+  if (instance.parent.props && instance.parent.props[name]) {
+    return instance.parent.props[name]
+  }
+  if (instance.parent.parent.props && instance.parent.parent.props[name]) {
+    return instance.parent.parent.props[name]
+  }
+}
+interface styleObj {
+  [propName: string]: string | number
+}
+
+export const cleanStyle = (style: styleObj) => {
+  for (let i in style) {
+    if (typeof style[i] === 'undefined') {
+      delete style[i]
+    }
+  }
+  return style
+}
