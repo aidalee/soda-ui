@@ -1,4 +1,10 @@
-import { defineComponent, toRefs, getCurrentInstance, computed, type CSSProperties } from 'vue'
+import {
+  defineComponent,
+  toRefs,
+  getCurrentInstance,
+  computed,
+  type CSSProperties
+} from 'vue'
 import type { SetupContext } from 'vue'
 import { ListItemProps, props } from './props'
 import useListItem from './use-list-item'
@@ -9,27 +15,29 @@ import { isDef } from '../utils/validate'
 import { useNamespace } from '../hooks/use-namespace'
 export default defineComponent({
   name: 'SoListItem',
-  props: props,
   components: {
     SoIcon
   },
+  props: props,
   setup(props: ListItemProps, ctx: SetupContext) {
-    const { title, value, desc, isLink, link, customClass, leftIcon } = toRefs(props)
+    const { title, value, desc, isLink, link, customClass, leftIcon } =
+      toRefs(props)
 
     const { slots } = ctx
 
     // const { classes } = useListItem(props, ctx)
 
     const ns = useNamespace('list-item')
-    
-    const labelStyle = computed(()=>{
-      let style:CSSProperties = cleanStyle(
-        {
-          width: getParentProp(getCurrentInstance()?.parent,'labelWidth'),
-          textAlign: getParentProp(getCurrentInstance()?.parent,'labelAlign'),
-          marginRight: getParentProp(getCurrentInstance()?.parent,'labelMarginRight')
-        }
-      )
+
+    const labelStyle = computed(() => {
+      const style: CSSProperties = cleanStyle({
+        width: getParentProp(getCurrentInstance()?.parent, 'labelWidth'),
+        textAlign: getParentProp(getCurrentInstance()?.parent, 'labelAlign'),
+        marginRight: getParentProp(
+          getCurrentInstance()?.parent,
+          'labelMarginRight'
+        )
+      })
       return style
     })
 
@@ -39,7 +47,7 @@ export default defineComponent({
     console.log(isDef(props.title), 'isdef title')
     console.log(slots.title, 'slots.title')
     console.log(props.title, 'props.title')
-  
+
     const renderDesc = () => {
       if (slots.desc || isDef(props.desc)) {
         return (
@@ -51,12 +59,18 @@ export default defineComponent({
     }
 
     const renderTitle = () => {
-      if (slots.title || isDef(props.title) ) {
+      if (slots.title || isDef(props.title)) {
         return (
           <div class={[ns.e('left')]}>
             <div class={[ns.e('title')]}>
               {renderLeftIcon()}
-              { slots.title ? slots.title() : <span style={{...labelStyle.value, ...props.titleStyle}}>{props.title}</span> }
+              {slots.title ? (
+                slots.title()
+              ) : (
+                <span style={{ ...labelStyle.value, ...props.titleStyle }}>
+                  {props.title}
+                </span>
+              )}
             </div>
             {renderDesc()}
           </div>
@@ -65,7 +79,7 @@ export default defineComponent({
     }
 
     const renderValue = () => {
-      if(slots.default || isDef(props.value)) {
+      if (slots.default || isDef(props.value)) {
         return (
           <div class={[ns.e('right')]}>
             {slots.default ? slots.default() : <span>{props.value}</span>}
@@ -75,10 +89,10 @@ export default defineComponent({
     }
 
     const renderLeftIcon = () => {
-      if(slots.leftIcon) {
+      if (slots.leftIcon) {
         return slots.leftIcon()
       }
-      if(props.leftIcon) {
+      if (props.leftIcon) {
         return (
           <so-icon
             name={props.leftIcon}

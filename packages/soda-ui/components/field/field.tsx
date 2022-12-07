@@ -6,21 +6,20 @@ import './field.scss'
 const ns = useNamespace('field')
 export default defineComponent({
   name: 'SoField',
-  props: fieldProps,
   components: {
     ListItem
   },
+  props: fieldProps,
   setup(props, ctx) {
+    const { slots } = ctx
 
     const renderLabel = () => {
       const classes = {
         [ns.e('label')]: props.label,
         [ns.em('label', 'disabled')]: props.disabled
       }
-      if(props.label) {
-        return (
-          <span class={classes}>{props.label}</span>
-        )
+      if (props.label) {
+        return <span class={classes}>{props.label}</span>
       }
     }
 
@@ -63,19 +62,35 @@ export default defineComponent({
         onKeypress
       }
 
-      return (
-        <input class={classes} type={props.type} {...inputAttrs} />
-      )
+      return <input class={classes} type={props.type} {...inputAttrs} />
+    }
+
+    const renderLeftIcon = () => {
+      const leftIconSlot = slots['left-icon']
+      if (props.leftIcon || leftIconSlot) {
+        return (
+          <div>
+            {leftIconSlot ? (
+              leftIconSlot()
+            ) : (
+              <so-icon name={props.leftIcon} classPrefix={props.iconPrefix} />
+            )}
+          </div>
+        )
+      }
     }
 
     return () => {
+      const leftIcon = renderLeftIcon()
       return (
         <list-item
+          v-slots={{
+            leftIcon: leftIcon ? () => leftIcon : null
+          }}
           title={renderLabel()}
           value={renderInput()}
           customClass={ns.b()}
-        >
-        </list-item>
+        ></list-item>
       )
     }
   }

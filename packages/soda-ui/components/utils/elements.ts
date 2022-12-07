@@ -74,7 +74,7 @@ interface styleObj {
 }
 
 export const cleanStyle = (style: styleObj) => {
-  for (let i in style) {
+  for (const i in style) {
     if (typeof style[i] === 'undefined') {
       delete style[i]
     }

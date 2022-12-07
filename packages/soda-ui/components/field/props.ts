@@ -33,5 +33,7 @@ export const fieldProps = {
   modelValue: String,
   disabled: Boolean,
   readonly: Boolean,
-  placeholder: String
+  placeholder: String,
+  leftIcon: String,
+  iconPrefix: String
 }
