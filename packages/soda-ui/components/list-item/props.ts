@@ -12,7 +12,7 @@ export const props = {
     default: ''
   },
   // 标题下面文字，一般为说明文字
-  inlineDesc: {
+  desc: {
     type: String,
     default: ''
   },
@@ -31,6 +31,22 @@ export const props = {
   customClass: {
     type: String,
     default: ''
+  },
+  leftIcon: {
+    type: String,
+    default: ''
+  },
+  rightIcon: {
+    type: String,
+    default: ''
+  },
+  iconPrefix: {
+    type: String,
+    default: 'so-icon'
+  },
+  titleStyle: {
+    type: Object,
+    default: {}
   }
 } as const
 

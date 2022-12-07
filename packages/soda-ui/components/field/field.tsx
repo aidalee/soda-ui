@@ -13,7 +13,10 @@ export default defineComponent({
   setup(props, ctx) {
 
     const renderLabel = () => {
-      const classes = ns.e('label')
+      const classes = {
+        [ns.e('label')]: props.label,
+        [ns.em('label', 'disabled')]: props.disabled
+      }
       if(props.label) {
         return (
           <span class={classes}>{props.label}</span>
@@ -43,7 +46,6 @@ export default defineComponent({
       // emit触发keypress事件
     }
 
-
     const renderInput = () => {
       // 之后要考虑开放input slots 用于用户传入自定义的表单
       const classes = ns.e('input')
@@ -53,6 +55,7 @@ export default defineComponent({
         value: props.modelValue,
         disabled: props.disabled,
         readonly: props.readonly,
+        placeholder: props.placeholder,
         onBlur,
         onFocus,
         onInput,
@@ -71,7 +74,7 @@ export default defineComponent({
           title={renderLabel()}
           value={renderInput()}
           customClass={ns.b()}
-        > 
+        >
         </list-item>
       )
     }

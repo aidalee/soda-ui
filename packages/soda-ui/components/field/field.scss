@@ -1,9 +1,22 @@
+@import '../styles/mixins/color';
+
 .so-field {
   &__input {
     border: 0;
     user-select: auto;
     &:focus {
       outline: none;
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+    &::placeholder {
+      color: $gray-500;
+    }
+  }
+  &__label{
+    &--disabled {
+      color: $gray-500;
     }
   }
 }

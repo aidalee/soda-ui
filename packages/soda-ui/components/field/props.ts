@@ -32,5 +32,6 @@ export const fieldProps = {
   name: String,
   modelValue: String,
   disabled: Boolean,
-  readonly: Boolean
+  readonly: Boolean,
+  placeholder: String
 }
