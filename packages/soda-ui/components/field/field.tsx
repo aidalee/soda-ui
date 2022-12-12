@@ -37,9 +37,11 @@ export default defineComponent({
 
     const renderLeftIcon = () => {
       const leftIconSlot = slots['left-icon']
+      const classes = ns.e('left-icon')
+
       if (props.leftIcon || leftIconSlot) {
         return (
-          <div>
+          <div class={classes}>
             {leftIconSlot ? (
               leftIconSlot()
             ) : (
@@ -80,15 +82,46 @@ export default defineComponent({
       return <input class={classes} type={props.type} {...inputAttrs} />
     }
 
+    const renderRight = () => {
+      const rightSlot = slots['right']
+      const classes = {
+        [ns.e('right-icon')]: props.rightIcon || rightSlot
+      }
+      if (props.rightIcon || rightSlot) {
+        return (
+          <div class={classes}>
+            {rightSlot ? (
+              rightSlot()
+            ) : (
+              <so-icon name={props.rightIcon} classPrefix={props.iconPrefix} />
+            )}
+          </div>
+        )
+      }
+    }
+
+    const renderFieldBody = () => {
+      const classes = {
+        [ns.e('field-body')]: true
+      }
+      return (
+        <div class={classes}>
+          {renderInput()}
+          {renderRight()}
+        </div>
+      )
+    }
+
     return () => {
       const leftIcon = renderLeftIcon()
+      const defaultSlot = renderFieldBody()
       return (
         <list-item
           v-slots={{
-            leftIcon: leftIcon ? () => leftIcon : null
+            leftIcon: leftIcon ? () => leftIcon : null,
+            default: defaultSlot ? () => defaultSlot : null
           }}
           title={renderLabel()}
-          value={renderInput()}
           customClass={ns.b()}
         ></list-item>
       )

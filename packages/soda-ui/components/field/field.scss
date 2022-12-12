@@ -4,6 +4,9 @@
   &__input {
     border: 0;
     user-select: auto;
+    width: 100%;
+    flex: 1;
+    min-width: 0;
     &:focus {
       outline: none;
     }
@@ -14,9 +17,18 @@
       color: $gray-500;
     }
   }
-  &__label{
+
+  &__left-icon {
+    margin-right: 4px;
+  }
+
+  &__label {
     &--disabled {
       color: $gray-500;
     }
+  }
+
+  &__field-body {
+    display: flex;
   }
 }

@@ -35,5 +35,6 @@ export const fieldProps = {
   readonly: Boolean,
   placeholder: String,
   leftIcon: String,
-  iconPrefix: String
+  iconPrefix: String,
+  rightIcon: String
 }

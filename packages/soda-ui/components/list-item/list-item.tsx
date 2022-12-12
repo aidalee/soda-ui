@@ -44,10 +44,6 @@ export default defineComponent({
     console.log(getCurrentInstance(), '0999999')
     console.log(getCurrentInstance()?.parent, '99888')
 
-    console.log(isDef(props.title), 'isdef title')
-    console.log(slots.title, 'slots.title')
-    console.log(props.title, 'props.title')
-
     const renderDesc = () => {
       if (slots.desc || isDef(props.desc)) {
         return (
@@ -62,15 +58,12 @@ export default defineComponent({
       if (slots.title || isDef(props.title)) {
         return (
           <div class={[ns.e('left')]}>
-            <div class={[ns.e('title')]}>
+            <div
+              class={[ns.e('title')]}
+              style={{ ...labelStyle.value, ...props.titleStyle }}
+            >
               {renderLeftIcon()}
-              {slots.title ? (
-                slots.title()
-              ) : (
-                <span style={{ ...labelStyle.value, ...props.titleStyle }}>
-                  {props.title}
-                </span>
-              )}
+              {slots.title ? slots.title() : <span>{props.title}</span>}
             </div>
             {renderDesc()}
           </div>

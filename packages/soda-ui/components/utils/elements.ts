@@ -62,6 +62,9 @@ export const toSizeUnit = (val: unknown) => {
 }
 
 export const getParentProp = (instance, name: string) => {
+  if (instance.props && instance.props[name]) {
+    return instance.props[name]
+  }
   if (instance.parent.props && instance.parent.props[name]) {
     return instance.parent.props[name]
   }
