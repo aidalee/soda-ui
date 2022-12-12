@@ -13,16 +13,6 @@ export default defineComponent({
   setup(props, ctx) {
     const { slots } = ctx
 
-    const renderLabel = () => {
-      const classes = {
-        [ns.e('label')]: props.label,
-        [ns.em('label', 'disabled')]: props.disabled
-      }
-      if (props.label) {
-        return <span class={classes}>{props.label}</span>
-      }
-    }
-
     const onFocus = (event: Event) => {
       // 修改鼠标状态等
     }
@@ -45,6 +35,31 @@ export default defineComponent({
       // emit触发keypress事件
     }
 
+    const renderLeftIcon = () => {
+      const leftIconSlot = slots['left-icon']
+      if (props.leftIcon || leftIconSlot) {
+        return (
+          <div>
+            {leftIconSlot ? (
+              leftIconSlot()
+            ) : (
+              <so-icon name={props.leftIcon} classPrefix={props.iconPrefix} />
+            )}
+          </div>
+        )
+      }
+    }
+
+    const renderLabel = () => {
+      const classes = {
+        [ns.e('label')]: props.label,
+        [ns.em('label', 'disabled')]: props.disabled
+      }
+      if (props.label) {
+        return <span class={classes}>{props.label}</span>
+      }
+    }
+
     const renderInput = () => {
       // 之后要考虑开放input slots 用于用户传入自定义的表单
       const classes = ns.e('input')
@@ -63,21 +78,6 @@ export default defineComponent({
       }
 
       return <input class={classes} type={props.type} {...inputAttrs} />
-    }
-
-    const renderLeftIcon = () => {
-      const leftIconSlot = slots['left-icon']
-      if (props.leftIcon || leftIconSlot) {
-        return (
-          <div>
-            {leftIconSlot ? (
-              leftIconSlot()
-            ) : (
-              <so-icon name={props.leftIcon} classPrefix={props.iconPrefix} />
-            )}
-          </div>
-        )
-      }
     }
 
     return () => {
