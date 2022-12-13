@@ -30,6 +30,12 @@
         placeholder="请输入联系方式"
         right-icon="add"
       ></so-field>
+      <so-field label="时间" type="time" placeholder="请选择时间"></so-field>
+      <so-field label="颜色" type="color" placeholder="请选择时间"></so-field>
+      <so-field label="图片" type="image" placeholder=""></so-field>
+      <so-field label="范围" type="range" placeholder=""></so-field>
+      <so-field label="日期" type="date" placeholder=""></so-field>
+      <so-field label="周" type="week" placeholder=""></so-field>
     </so-list>
   </demo-block>
 </template>
