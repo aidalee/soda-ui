@@ -1,9 +1,13 @@
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 import ListItem from '../list-item/list-item'
 import { fieldProps } from './props'
 import { useNamespace } from '../hooks/use-namespace'
+import { isDef } from '../utils/validate'
 import './field.scss'
 const ns = useNamespace('field')
+// Shared props of Field and Form
+export type FieldFormSharedProps = 'disabled' | 'readonly'
+
 export default defineComponent({
   name: 'SoField',
   components: {
@@ -12,6 +16,15 @@ export default defineComponent({
   props: fieldProps,
   setup(props, ctx) {
     const { slots } = ctx
+    const form = useParent()
+    const getProp = <T extends FieldFormSharedProps>(key: T) => {
+      if (isDef(props[key])) {
+        return props[key]
+      }
+      if (form && isDef(form.props[key])) {
+        return form.props[key]
+      }
+    }
 
     const onFocus = (event: Event) => {
       // 修改鼠标状态等
@@ -100,6 +113,14 @@ export default defineComponent({
       }
     }
 
+    const onClear = () => {
+      // 清除输入框的值
+    }
+
+    const showClear = computed(() => {
+      return true
+    })
+
     const renderFieldBody = () => {
       const classes = {
         [ns.e('field-body')]: true
@@ -107,6 +128,13 @@ export default defineComponent({
       return (
         <div class={classes}>
           {renderInput()}
+          {showClear.value && (
+            <so-icon
+              name={props.clearIcon}
+              class={ns.e('clear')}
+              onTouchstart={onClear}
+            ></so-icon>
+          )}
           {renderRight()}
         </div>
       )

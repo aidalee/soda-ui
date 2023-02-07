@@ -1,12 +1,22 @@
 <template>
   <demo-block>
     <so-list label-width="100px" label-align="left">
-      <so-field label="验证码" type="text" placeholder="请输入验证码">
+      <so-field
+        label="验证码"
+        type="text"
+        show-clear
+        placeholder="请输入验证码"
+      >
         <template #right>
           <so-button type="primary">发送验证码</so-button>
         </template>
       </so-field>
-      <so-field label="姓名" type="text" placeholder="请输入姓名"></so-field>
+      <so-field
+        label="姓名"
+        type="text"
+        show-clear
+        placeholder="请输入姓名"
+      ></so-field>
       <so-field
         label="手机号"
         type="text"

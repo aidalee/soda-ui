@@ -36,5 +36,10 @@ export const fieldProps = {
   placeholder: String,
   leftIcon: String,
   iconPrefix: String,
-  rightIcon: String
+  rightIcon: String,
+  clearable: Boolean,
+  clearIcon: {
+    type: String,
+    default: 'add'
+  }
 }
