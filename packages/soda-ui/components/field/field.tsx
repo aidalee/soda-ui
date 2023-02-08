@@ -2,6 +2,7 @@ import { computed, defineComponent } from 'vue'
 import ListItem from '../list-item/list-item'
 import { fieldProps } from './props'
 import { useNamespace } from '../hooks/use-namespace'
+import { useParent } from '../hooks/use-parent'
 import { isDef } from '../utils/validate'
 import './field.scss'
 const ns = useNamespace('field')
