@@ -1,13 +1,13 @@
 <template>
   <div v-if="!isDemoPage" class="docs">
-    <div class="docs__header">
-      <router-link to="/"> So UI </router-link>
+    <div class="docs-header">
+      <router-link to="/" class="header-logo"> So UI </router-link>
       <div class="header-nav">
         <router-link to="/"> 指南 </router-link>
         <router-link to="/components/button"> 组件 </router-link>
       </div>
     </div>
-    <div class="docs__main">
+    <div class="docs-main">
       <router-view />
     </div>
     <!-- <div class="docs__footer">footer</div> -->
@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .docs {
-  .docs__header {
+  .docs-header {
     height: 60px;
     background: #fff;
     padding: 0 40px;
@@ -41,10 +41,15 @@ export default {
     .header-nav {
       a {
         margin: 0 10px;
+        color: #333;
       }
     }
+    .header-logo {
+      font-size: 20px;
+      color: #333;
+    }
   }
-  .docs__main {
+  .docs-main {
     overflow: scroll;
   }
   // .docs__footer {

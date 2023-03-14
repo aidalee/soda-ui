@@ -1,6 +1,7 @@
 <template>
   <demo-block title="图标">
     <so-icon name="add" size="12"></so-icon>
+    <so-icon name="clear" size="12"></so-icon>
     <so-icon
       :name="name"
       size="32"

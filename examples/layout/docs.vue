@@ -52,8 +52,18 @@ export default {
     box-shadow: 2px 0px 8px #f0f1f2;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     background: #fff;
+    a {
+      color: #333;
+      padding: 10px 40px;
+      &:hover {
+        color: #1989fa;
+      }
+    }
+    .router-link-active {
+      color: #1989fa;
+    }
   }
   .doc-page__content {
     width: calc(100% - 575px);

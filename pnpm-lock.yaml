@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@babel/core': ^7.19.6
       '@soda-f2e/cli': workspace:*
-      '@soda-f2e/eslint-config': workspace:*
+      '@soda-f2e/eslint-config': workspace:5.0.1
       '@soda-f2e/stylelint-config': workspace:*
       '@testing-library/vue': ^6.6.1
       '@types/fs-extra': ^9.0.13
@@ -2153,7 +2153,7 @@ packages:
       '@babel/plugin-syntax-import-meta': 7.10.4_@babel+core@7.19.6
       '@babel/plugin-transform-typescript': 7.19.3_@babel+core@7.19.6
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.19.6
-      vite: 3.1.6
+      vite: 3.1.6_sass@1.56.0
       vue: 3.2.40
     transitivePeerDependencies:
       - supports-color
@@ -2166,7 +2166,7 @@ packages:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.1.6
+      vite: 3.1.6_sass@1.56.0
       vue: 3.2.40
 
   /@vitest/coverage-istanbul/0.24.1_happy-dom@7.6.7:

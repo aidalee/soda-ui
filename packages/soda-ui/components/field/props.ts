@@ -40,6 +40,6 @@ export const fieldProps = {
   clearable: Boolean,
   clearIcon: {
     type: String,
-    default: 'add'
+    default: 'clear'
   }
 }

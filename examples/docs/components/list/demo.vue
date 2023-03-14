@@ -6,7 +6,7 @@
       title="测试数据列表"
       title-color="#f00"
     >
-      <so-list-item title="测试" value="查看" left-icon="add">
+      <so-list-item title="测试" value="查看" left-icon="clear">
         <template #desc>
           <span>descdescdescdescdescdescdescdescdescdesc</span>
         </template>

@@ -18,6 +18,7 @@ export default defineComponent({
   setup(props, ctx) {
     const { slots } = ctx
     const form = useParent()
+    const getModelValue = () => String(props.modelValue ?? '')
     const getProp = <T extends FieldFormSharedProps>(key: T) => {
       if (isDef(props[key])) {
         return props[key]
