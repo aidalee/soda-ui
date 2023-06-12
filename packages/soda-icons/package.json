@@ -1,6 +1,6 @@
 {
   "name": "@soda-f2e/icons",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "description": "soda icons",
   "main": "./src/config.js",
   "types": "./src/config.d.ts",

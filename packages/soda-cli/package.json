@@ -1,6 +1,6 @@
 {
   "name": "@soda-f2e/cli",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "description": "cli of soda",
   "bin": {
     "soda-cli": "./lib/bin.js"

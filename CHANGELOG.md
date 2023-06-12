@@ -1,3 +1,25 @@
+# [6.0.0](https://github.com/aidalee/soda-ui/compare/v5.0.1...v6.0.0) (2023-06-12)
+
+
+### Bug Fixes
+
+* fix style ([469a7fd](https://github.com/aidalee/soda-ui/commit/469a7fd31cf7ad8522da4f3706de7c097afb4255))
+
+
+### Features
+
+* 输入框类型 ([139842b](https://github.com/aidalee/soda-ui/commit/139842baf6855a12513b0881cbd95d429f6f60e4))
+* field ([bfc814b](https://github.com/aidalee/soda-ui/commit/bfc814b508aef646409a92d48336167065f98bae))
+* field ([4f86a2b](https://github.com/aidalee/soda-ui/commit/4f86a2bf474090b806e6fc4a16a76ec9cc61928e))
+* field组件 ([3d2c8c3](https://github.com/aidalee/soda-ui/commit/3d2c8c39b5390eb4ee5d962fd279c2e95f452365))
+* field组件基础搭建 ([d03420b](https://github.com/aidalee/soda-ui/commit/d03420befdbb2c570d619c801c5719a44ceaea14))
+* fix ([1e6eee7](https://github.com/aidalee/soda-ui/commit/1e6eee70db72506cf1e4269371bed69eab944299))
+* input右侧元素 ([613d112](https://github.com/aidalee/soda-ui/commit/613d112359520935a12456bf11fa234713d45b59))
+* list & field 样式联调 ([61aff4d](https://github.com/aidalee/soda-ui/commit/61aff4d266a5a46f180ee4b81adfe50ee054a235))
+* list-item组件优化 ([d84694b](https://github.com/aidalee/soda-ui/commit/d84694ba98d7118e5c1b80a16adcc279262e8cc7))
+
+
+
 ## [5.0.1](https://github.com/aidalee/soda-ui/compare/v5.0.0...v5.0.1) (2022-12-01)
 
 
