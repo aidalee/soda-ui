@@ -1,6 +1,15 @@
 import List from './list';
-List.install = function (app) {
-  app.component(List.name, List);
+
+// List.install = function (app: App) {
+//   app.component(List.name, List)
+// }
+
+// export const _ListComponent = List
+
+export { List };
+// 导出插件
+export default {
+  install: function install(app) {
+    app.component(List.name, List);
+  }
 };
-export var _ListComponent = List;
-export default List;
