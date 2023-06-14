@@ -30,6 +30,11 @@ const routes = [
         path: 'field',
         name: 'doc-field',
         component: () => import('./docs/components/field/index.md')
+      },
+      {
+        path: 'card',
+        name: 'doc-card',
+        component: () => import('./docs/components/card/index.md')
       }
     ]
   },
@@ -57,6 +62,11 @@ const routes = [
         path: 'field',
         name: 'demo-field',
         component: () => import('./docs/components/field/demo.vue')
+      },
+      {
+        path: 'card',
+        name: 'demo-card',
+        component: () => import('./docs/components/card/demo.vue')
       }
     ]
   }

@@ -36,6 +36,7 @@ export default {
     right: 10%;
     bottom: 7%;
     box-sizing: border-box;
+    background: #dedfe0;
   }
 }
 iframe {

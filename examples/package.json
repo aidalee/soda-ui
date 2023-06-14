@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@soda-f2e/ui": "workspace:^5.0.1"
+    "@soda-f2e/ui": "^5.0.1"
   }
 }

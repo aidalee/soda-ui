@@ -6,6 +6,7 @@
       <router-link to="/components/list"> list列表 </router-link>
       <router-link to="/components/icon"> icon图标 </router-link>
       <router-link to="/components/field"> field输入 </router-link>
+      <router-link to="/components/card"> card卡片 </router-link>
     </div>
     <!-- 中间文档 -->
     <div class="doc-page__content">
