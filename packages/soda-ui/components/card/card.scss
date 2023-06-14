@@ -3,6 +3,36 @@
 .so-card {
   width: 100%;
   height: auto;
-  padding: 10px 15px;
   background-color: #fff;
+  &__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px;
+    position: relative;
+    &::after {
+      @include bottom-line();
+    }
+  }
+  &__title {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+  &__body {
+    padding: 10px 15px;
+  }
+  &__extra {
+    font-size: 12px;
+  }
+  &__footer {
+    padding: 10px 15px;
+    color: #333;
+    font-size: 14px;
+    position: relative;
+    &::before {
+      @include top-line()
+    }
+  }
 }

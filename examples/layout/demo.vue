@@ -23,6 +23,7 @@ export default {
 .so-doc-demo__mobi {
   position: relative;
   padding-top: 200%;
+  background-color: #dedfe0;
   background-image: url('../images/phone.png');
   background-position: top center;
   background-size: contain;
@@ -36,7 +37,6 @@ export default {
     right: 10%;
     bottom: 7%;
     box-sizing: border-box;
-    background: #dedfe0;
   }
 }
 iframe {
