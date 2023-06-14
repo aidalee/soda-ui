@@ -1,7 +1,7 @@
 <template>
   <div v-if="!isDemoPage" class="docs">
     <div class="docs__header">
-      <router-link to="/"> So UI </router-link>
+      <router-link class="docs__header-title" to="/"> So UI </router-link>
       <div class="header-nav">
         <router-link to="/"> 指南 </router-link>
         <router-link to="/components/button"> 组件 </router-link>
@@ -33,14 +33,20 @@ export default {
   .docs__header {
     height: 60px;
     background: #fff;
-    padding: 0 40px;
+    padding: 0 40px 0 15px;
     box-shadow: 0 2px 8px #f0f1f2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    > a.docs__header-title {
+      color: #333;
+      font-size: 22px;
+      font-weight: bold;
+    }
     .header-nav {
       a {
         margin: 0 10px;
+        color: #333;
       }
     }
   }

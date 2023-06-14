@@ -70,5 +70,17 @@ export default {
     position: fixed;
     top: 12px;
   }
+  .doc-page__menu {
+    display: flex;
+    padding: 0 15px;
+    a {
+      color: #333;
+      font-size: 16px;
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      padding: 8px 0;
+    }
+  }
 }
 </style>
