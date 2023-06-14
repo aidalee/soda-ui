@@ -6,12 +6,10 @@ export default defineComponent({
   name: 'SoCard',
   setup(props, ctx) {
     const { slots } = ctx
+    console.log(111, slots.default && slots.default())
     return () => {
       return (
-        <div
-          class={[ns.b()]}
-          v-slots={{ default: slots.default ? slots.default() : null }}
-        ></div>
+        <div class={[ns.b()]}>{ctx.slots.default && ctx.slots.default()}</div>
       )
     }
   }
