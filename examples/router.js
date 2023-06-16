@@ -35,6 +35,11 @@ const routes = [
         path: 'card',
         name: 'doc-card',
         component: () => import('./docs/components/card/index.md')
+      },
+      {
+        path: 'tab',
+        name: 'doc-tab',
+        component: () => import('./docs/components/tab/index.md')
       }
     ]
   },
@@ -67,6 +72,11 @@ const routes = [
         path: 'card',
         name: 'demo-card',
         component: () => import('./docs/components/card/demo.vue')
+      },
+      {
+        path: 'tab',
+        name: 'demo-tab',
+        component: () => import('./docs/components/tab/demo.vue')
       }
     ]
   }

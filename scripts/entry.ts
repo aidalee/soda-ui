@@ -9,18 +9,22 @@ import ListItemPlugin, {
 
 import TagPlugin, { Tag } from '../packages/soda-ui/components/tag'
 import CardPlugin, { Card } from '../packages/soda-ui/components/card'
+import TabPlugin, { Tab } from '../packages/soda-ui/components/tab'
+import TabItemPlugin, { TabItem } from '../packages/soda-ui/components/tab-item'
 
 const version = require('../package.json').version
 
 // 2. 导出这些组件
-export { Button, List, ListItem, Tag, Card }
+export { Button, List, ListItem, Tag, Card, Tab, TabItem }
 
 const installs = [
   ButtonPlugin,
   ListPlugin,
   TagPlugin,
   ListItemPlugin,
-  CardPlugin
+  CardPlugin,
+  TabPlugin,
+  TabItemPlugin
 ]
 
 // 3.导出一个vue插件

@@ -1,7 +1,7 @@
 <template>
   <div v-if="!isDemoPage" class="docs">
     <div class="docs__header">
-      <router-link class="docs__header-title" to="/"> So UI </router-link>
+      <router-link class="docs__header-title" to="/"> Soda UI </router-link>
       <div class="header-nav">
         <router-link to="/"> 指南 </router-link>
         <router-link to="/components/button"> 组件 </router-link>
