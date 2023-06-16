@@ -48,9 +48,6 @@ export default defineComponent({
       return (
         <div class={[ns.b()]} style={cardStyle()}>
           {(props.title || ctx.slots?.extra) && renderHeader()}
-          {/* {ctx.slots.default ? (
-            <div class="so-card__body">{ctx.slots.default()}</div>
-          ) : null} */}
           <div class="so-card__body">
             {ctx.slots?.default && ctx.slots.default()}
           </div>

@@ -1,0 +1,15 @@
+@import '../styles/mixins/mixin';
+
+.so-tab {
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  background-color: #fff;
+  position: relative;
+  &--vertical {
+    height: auto;
+  }
+  &::after {
+    @include bottom-line()
+  }
+}
