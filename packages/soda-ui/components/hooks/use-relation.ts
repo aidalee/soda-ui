@@ -27,6 +27,7 @@ export function useChildren<
     const link = (child: ComponentInternalInstance) => {
       if (child.proxy) {
         internalChildren.push(child)
+        console.log(child.proxy, 'prox')
         publicChildren.push(child.proxy as Child)
         sortChildren(parent, publicChildren, internalChildren)
       }
