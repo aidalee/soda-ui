@@ -95,7 +95,9 @@ export default defineComponent({
     }
 
     // const scrollToCurrentContent = () => {}
-
+    // const getEl = (el: any) => {
+    //   console.log(el, 'elell')
+    // }
     const renderNav = () => {
       return children.map((item: ComponentInstance, index: number) => {
         console.log(setTitleRefs(index), 'set')
@@ -104,6 +106,7 @@ export default defineComponent({
             isActive={state.currentIndex === index}
             title={item.title}
             ref={setTitleRefs(index)}
+            // ref={el => getEl(el)}
             onClick={(event: MouseEvent) => onClickTabItem(item, index, event)}
           />
         )
