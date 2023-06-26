@@ -16,7 +16,7 @@ import { useNamespace } from '../hooks/use-namespace'
 import { onMountedOrActivated } from '../hooks/on-mounted-or-activated'
 import './tab.scss'
 import { tabProps } from './props'
-import { ComponentInstance, type Numeric } from '../../utils'
+import { ComponentInstance, type Numeric } from '../utils/basic'
 import { useRefs } from '../hooks/use-refs'
 // interface TabProps {
 //   vertical?: boolean

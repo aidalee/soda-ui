@@ -1,4 +1,4 @@
-import { makeStringProp } from '../../utils'
+import { makeStringProp } from '../utils/props'
 
 export type FieldType =
   | 'tel'
