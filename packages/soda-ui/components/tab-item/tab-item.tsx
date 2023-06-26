@@ -1,4 +1,11 @@
-import { defineComponent, onMounted, getCurrentInstance, ref } from 'vue'
+import {
+  defineComponent,
+  onMounted,
+  getCurrentInstance,
+  ref,
+  computed,
+  reactive
+} from 'vue'
 import { useNamespace } from '../hooks/use-namespace'
 import './tab-item.scss'
 import { tabItemProps } from './props'
@@ -9,22 +16,22 @@ export default defineComponent({
   name: 'SoTabItem',
   props: tabItemProps,
   // emits: ['on-item-click'],
-  setup(props, ctx) {
-    // const currentIndex = 0
-    // const onItemClick = (e: MouseEvent) => {
-    //   ctx.emit('on-item-click', currentIndex)
-    // }
+  setup(props, { slots }) {
     const { parent, index } = useParent(TAB_KEY)
-    console.log(22, parent, index)
+
+    const getName = () => props.name ?? index.value
+
+    const active = computed(() => {
+      // 取被激活选项的标签name和当下选项的标签name进行比对，命中项的内容展示出来
+      const isActive = getName() === parent?.currentName?.value
+      return isActive
+    })
+
     return () => {
+      const show = active.value
       return (
-        <div class={[ns.b()]}>
-          <div class="so-tab-item__content">
-            {ctx.slots.default && ctx.slots.default()}
-          </div>
-          {/* {props?.badgeLabel && (
-            <div class="so-tab-item__badge">{props.badgeLabel}</div>
-          )} */}
+        <div class={ns.e('content')} v-show={show}>
+          {slots.default && slots.default()}
         </div>
       )
     }

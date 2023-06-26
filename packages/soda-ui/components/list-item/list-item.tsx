@@ -41,9 +41,6 @@ export default defineComponent({
       return style
     })
 
-    console.log(getCurrentInstance(), '0999999')
-    console.log(getCurrentInstance()?.parent, '99888')
-
     const renderDesc = () => {
       if (slots.desc || isDef(props.desc)) {
         return (

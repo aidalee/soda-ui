@@ -8,13 +8,16 @@ import {
   ExtractPropTypes,
   reactive,
   watch,
-  nextTick
+  nextTick,
+  CSSProperties,
+  computed
 } from 'vue'
 import { useNamespace } from '../hooks/use-namespace'
 import { onMountedOrActivated } from '../hooks/on-mounted-or-activated'
 import './tab.scss'
 import { tabProps } from './props'
-
+import { ComponentInstance, type Numeric } from '../../utils'
+import { useRefs } from '../hooks/use-refs'
 // interface TabProps {
 //   vertical?: boolean
 //   defaultColor?: string
@@ -30,47 +33,122 @@ export type TabsProvide = {
   // setLine: () => void
   // onRendered: (name: Numeric, title?: string) => void
   // scrollIntoView: (immediate?: boolean) => void
-  // currentName: ComputedRef<Numeric | undefined>
+  currentName: ComputedRef<Numeric | undefined>
 }
 import { useChildren } from '../hooks/use-relation'
 import TabTitle from './tab-title'
 export const TAB_KEY: InjectionKey<TabsProvide> = Symbol('so-tab')
 const ns = useNamespace('tab')
+
 export default defineComponent({
   name: 'SoTab',
   props: tabProps,
   setup(props, ctx) {
     const { children, linkChildren } = useChildren(TAB_KEY)
+    const [titleRefs, setTitleRefs] = useRefs<ComponentInstance>()
 
     const state = reactive({
-      currentIndex: -1,
-      len: children.length
+      currentIndex: 0,
+      lineStyle: {} as CSSProperties
+    })
+    // eslint-disable-next-line vue/return-in-computed-property
+    const currentName = computed(() => {
+      const activeTab = children[state.currentIndex]
+      if (activeTab) {
+        return getTabName(activeTab, state.currentIndex)
+      }
     })
 
-    const renderNav = () => {
-      return children.map((item, index) => {
-        return <TabTitle title={item.title} />
+    const getTabName = (tab: ComponentInstance, index: number): Numeric => {
+      return tab.name ?? index
+    }
+
+    const setLine = () => {
+      nextTick(() => {
+        const titles = titleRefs.value
+        if (titles && titles[state.currentIndex]) {
+          const title = titles[state.currentIndex].$el
+          const left = title.offsetLeft + title.offsetWidth / 2
+          const lineStyle: CSSProperties = {
+            width: '40px',
+            height: '3px',
+            // backgroundColor: '',
+            transform: `translateX(${left}px) translateX(-50%)`
+          }
+          state.lineStyle = lineStyle
+        }
       })
     }
 
-    const renderHeader = () => {
-      return <>{renderNav()}</>
+    const onClickTabItem = (
+      item: ComponentInstance,
+      index: number,
+      event: MouseEvent
+    ) => {
+      // 点击tabItem 处理标签的样式
+      setCurrentIndex(index)
+      // scrollToCurrentContent()
+      // 处理完以上之后触发外面传进来的click-tab事件并传递相关的一些参数以供使用者使用
     }
 
-    const init = () => {}
+    const setCurrentIndex = (index: number) => {
+      state.currentIndex = index
+    }
+
+    // const scrollToCurrentContent = () => {}
+
+    const renderNav = () => {
+      return children.map((item: ComponentInstance, index: number) => {
+        return (
+          <TabTitle
+            isActive={state.currentIndex === index}
+            title={item.title}
+            ref={setTitleRefs(index)}
+            onClick={(event: MouseEvent) => onClickTabItem(item, index, event)}
+          />
+        )
+      })
+    }
+    const renderLine = () => {
+      const classes = ns.e('line')
+      return <div class={classes} style={state.lineStyle}></div>
+    }
+
+    const renderHeader = () => {
+      const classes = ns.e('header')
+      return (
+        <div class={classes}>
+          {renderNav()}
+          {renderLine()}
+        </div>
+      )
+    }
+
+    const init = () => {
+      console.log('init')
+    }
 
     onMounted(() => {
-      console.log(children, children.length)
+      setLine()
     })
 
     watch(
       () => children.length,
       () => {
-        nextTick(() => {})
+        nextTick(() => {
+          setLine()
+        })
       }
     )
 
-    linkChildren({ props })
+    watch(
+      () => state.currentIndex,
+      () => {
+        setLine()
+      }
+    )
+
+    linkChildren({ props, currentName })
 
     onMountedOrActivated(init)
 
@@ -78,7 +156,7 @@ export default defineComponent({
       return (
         <div class={[ns.b()]}>
           {renderHeader()}
-          {ctx.slots.default && ctx.slots.default()}
+          <div>{ctx.slots.default && ctx.slots.default()}</div>
           {/* <div class="so-tab__line">
             <div class="so-tab__line__inner"></div>
           </div> */}
