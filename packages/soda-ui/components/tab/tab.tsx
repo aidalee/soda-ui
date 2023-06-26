@@ -24,7 +24,6 @@ import { useRefs } from '../hooks/use-refs'
 //   activeColor?: string
 //   disabledColor?: string
 // }
-
 export type TabProps = ExtractPropTypes<typeof tabProps>
 
 export type TabsProvide = {
@@ -99,6 +98,7 @@ export default defineComponent({
 
     const renderNav = () => {
       return children.map((item: ComponentInstance, index: number) => {
+        console.log(setTitleRefs(index), 'set')
         return (
           <TabTitle
             isActive={state.currentIndex === index}
