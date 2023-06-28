@@ -13,7 +13,9 @@ export default defineComponent({
     isActive: Boolean,
     // eslint-disable-next-line vue/require-default-prop
     activeColor: String,
-    inactiveColor: String
+    inactiveColor: String,
+    scrollable: Boolean,
+    disabled: Boolean
     // onClick:
     // disabled: Boolean
   },
@@ -29,16 +31,24 @@ export default defineComponent({
       }
       return style
     })
+
     const renderText = () => {
       const Text = <div>{slots.title ? slots.title() : props.title}</div>
       return Text
     }
+
+    const classes = computed(() => ({
+      [ns.e('title')]: true,
+      [ns.em('title', 'disabled')]: props.disabled,
+      [ns.em('title', 'active')]: props.isActive
+    }))
+
     return () => (
       <div
-        // aria-disabled={props.disabled || undefined}
-        aria-aria-selected={props.isActive}
+        aria-disabled={props.disabled || undefined}
+        aria-selected={props.isActive}
         style={style.value}
-        class={ns.e('title')}
+        class={classes.value}
       >
         {renderText()}
       </div>

@@ -30,7 +30,7 @@ $error: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
-// $disabled-text: $gray-600 !default;
+$disabled-text: $gray-500 !default;
 
 // $theme-colors:
 // (
@@ -128,6 +128,6 @@ $btn-border-radius-sm: $border-radius-sm !default;
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
 
-// icon
-// $icon-fill-hover:             $gray-600;
-// $icon-background-hover:       $gray-300;
+
+$padding-sm: 12px !default;
+$padding-lg: 24px !default;

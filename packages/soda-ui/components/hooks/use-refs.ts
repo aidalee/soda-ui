@@ -13,8 +13,6 @@ export function useRefs<T = Element>() {
     //如果cache[index]不存在，为cache[index]赋值
     if (!cache[index]) {
       cache[index] = (el: unknown) => {
-        // debugger
-        console.log(el, 'el')
         refs.value[index] = el as T
       }
     }

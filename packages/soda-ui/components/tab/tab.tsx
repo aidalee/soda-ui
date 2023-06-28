@@ -18,12 +18,7 @@ import './tab.scss'
 import { tabProps } from './props'
 import { ComponentInstance, type Numeric } from '../utils/basic'
 import { useRefs } from '../hooks/use-refs'
-// interface TabProps {
-//   vertical?: boolean
-//   defaultColor?: string
-//   activeColor?: string
-//   disabledColor?: string
-// }
+
 export type TabProps = ExtractPropTypes<typeof tabProps>
 
 export type TabsProvide = {
@@ -34,6 +29,7 @@ export type TabsProvide = {
   // scrollIntoView: (immediate?: boolean) => void
   currentName: ComputedRef<Numeric | undefined>
 }
+
 import { useChildren } from '../hooks/use-relation'
 import TabTitle from './tab-title'
 export const TAB_KEY: InjectionKey<TabsProvide> = Symbol('so-tab')
@@ -42,7 +38,8 @@ const ns = useNamespace('tab')
 export default defineComponent({
   name: 'SoTab',
   props: tabProps,
-  setup(props, ctx) {
+  emits: ['click-tab'],
+  setup(props, { emit, slots }) {
     const { children, linkChildren } = useChildren(TAB_KEY)
     const [titleRefs, setTitleRefs] = useRefs<ComponentInstance>()
 
@@ -57,6 +54,8 @@ export default defineComponent({
         return getTabName(activeTab, state.currentIndex)
       }
     })
+
+    const scrollable = computed(() => children.length > props.swipeThreshold)
 
     const getTabName = (tab: ComponentInstance, index: number): Numeric => {
       return tab.name ?? index
@@ -86,6 +85,13 @@ export default defineComponent({
     ) => {
       // 点击tabItem 处理标签的样式
       setCurrentIndex(index)
+      // setLine()
+      const { title } = item
+      emit('click-tab', {
+        index,
+        title,
+        event
+      })
       // scrollToCurrentContent()
       // 处理完以上之后触发外面传进来的click-tab事件并传递相关的一些参数以供使用者使用
     }
@@ -95,18 +101,16 @@ export default defineComponent({
     }
 
     // const scrollToCurrentContent = () => {}
-    // const getEl = (el: any) => {
-    //   console.log(el, 'elell')
-    // }
+
     const renderNav = () => {
       return children.map((item: ComponentInstance, index: number) => {
-        console.log(setTitleRefs(index), 'set')
         return (
           <TabTitle
-            isActive={state.currentIndex === index}
+            isActive={state.currentIndex == index}
             title={item.title}
+            scrollable={scrollable.value}
+            disabled={item.disabled}
             ref={setTitleRefs(index)}
-            // ref={el => getEl(el)}
             onClick={(event: MouseEvent) => onClickTabItem(item, index, event)}
           />
         )
@@ -118,7 +122,11 @@ export default defineComponent({
     }
 
     const renderHeader = () => {
-      const classes = ns.e('header')
+      const classes = {
+        [ns.e('header')]: true,
+        [ns.em('header', 'complete')]: scrollable.value
+      }
+
       return (
         <div class={classes}>
           {renderNav()}
@@ -159,7 +167,7 @@ export default defineComponent({
       return (
         <div class={[ns.b()]}>
           {renderHeader()}
-          <div>{ctx.slots.default && ctx.slots.default()}</div>
+          <div>{slots.default && slots.default()}</div>
           {/* <div class="so-tab__line">
             <div class="so-tab__line__inner"></div>
           </div> */}

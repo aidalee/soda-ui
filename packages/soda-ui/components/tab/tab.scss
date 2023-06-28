@@ -1,5 +1,6 @@
 @import '../styles/mixins/mixin';
 @import '../styles/mixins/color';
+@import '../styles/mixins/variables';
 
 .so-tab {
   display: flex;
@@ -16,9 +17,28 @@
     position: relative;
     display: flex;
     cursor: pointer;
+    user-select: none;
+    &--complete {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
   &__title {
     flex: 1;
+    word-break: keep-all;
+    padding: 0 $padding-lg;
+    &--active {
+      color: $gray-900;
+    }
+    &--disabled {
+      color: $disabled-text;
+      cursor: not-allowed;
+    }
   }
   &__line {
     position: absolute;
