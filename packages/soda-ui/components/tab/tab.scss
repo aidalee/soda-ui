@@ -5,12 +5,13 @@
 .so-tab {
   display: flex;
   width: 100%;
-  background-color: #fff;
   flex-direction: column;
+
   &__header {
     width: 100%;
     height: 44;
     color: #8d8e99;
+    background-color: #fff;
     font-size: 14px;
     text-align: center;
     line-height: 44px;
@@ -28,10 +29,12 @@
       }
     }
   }
+
   &__title {
     flex: 1;
     word-break: keep-all;
     padding: 0 $padding-lg;
+    text-align: center;
     &--active {
       color: $gray-900;
     }
@@ -40,10 +43,25 @@
       cursor: not-allowed;
     }
   }
+
   &__line {
     position: absolute;
     left: 0;
     bottom: 0px;
     background-color: $primary;
+  }
+
+  &--vertical {
+    flex-direction: row;
+    .so-tab__header {
+      width: auto;
+      flex-direction: column;
+    }
+    .so-tab__line {
+      right: 0;
+      left: auto;
+      bottom: auto;
+      top: 9px;
+    }
   }
 }

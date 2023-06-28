@@ -67,12 +67,23 @@ export default defineComponent({
         if (titles && titles[state.currentIndex]) {
           const title = titles[state.currentIndex].$el
           const left = title.offsetLeft + title.offsetWidth / 2
-          const lineStyle: CSSProperties = {
-            width: '40px',
-            height: '3px',
-            // backgroundColor: '',
-            transform: `translateX(${left}px) translateX(-50%)`
+          const top = title.offsetTop
+
+          let lineStyle: CSSProperties = {}
+          if (props.vertical) {
+            lineStyle = {
+              width: '3px',
+              height: '26px',
+              transform: `translateY(${top}px)`
+            }
+          } else {
+            lineStyle = {
+              width: '40px',
+              height: '3px',
+              transform: `translateX(${left}px) translateX(-50%)`
+            }
           }
+
           state.lineStyle = lineStyle
         }
       })
@@ -165,7 +176,7 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class={[ns.b()]}>
+        <div class={[ns.b(), props.vertical ? ns.m('vertical') : '']}>
           {renderHeader()}
           <div>{slots.default && slots.default()}</div>
           {/* <div class="so-tab__line">

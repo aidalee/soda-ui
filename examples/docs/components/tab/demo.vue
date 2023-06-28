@@ -13,8 +13,14 @@
       <so-tab-item title="标签10">内容10</so-tab-item>
     </so-tab>
   </demo-block>
-  <demo-block>
+  <demo-block title="触发标签栏点击事件">
     <so-tab @click-tab="handleClick">
+      <so-tab-item title="标签1">content 1</so-tab-item>
+      <so-tab-item title="标签2">content 2</so-tab-item>
+    </so-tab>
+  </demo-block>
+  <demo-block title="垂直模式">
+    <so-tab vertical>
       <so-tab-item title="标签1">content 1</so-tab-item>
       <so-tab-item title="标签2">content 2</so-tab-item>
     </so-tab>
