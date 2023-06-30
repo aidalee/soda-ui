@@ -40,6 +40,11 @@ const routes = [
         path: 'tab',
         name: 'doc-tab',
         component: () => import('./docs/components/tab/index.md')
+      },
+      {
+        path: 'sticky',
+        name: 'doc-sticky',
+        component: () => import('./docs/components/sticky/index.md')
       }
     ]
   },
@@ -77,6 +82,11 @@ const routes = [
         path: 'tab',
         name: 'demo-tab',
         component: () => import('./docs/components/tab/demo.vue')
+      },
+      {
+        path: 'sticky',
+        name: 'demo-sticky',
+        component: () => import('./docs/components/sticky/demo.vue')
       }
     ]
   }

@@ -28,7 +28,7 @@ export default defineComponent({
     })
 
     return () => {
-      const show = active.value
+      const show = parent?.props.scrollspy || active.value
       return (
         <div class={ns.e('content')} v-show={show}>
           {slots.default && slots.default()}

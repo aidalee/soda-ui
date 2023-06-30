@@ -35,6 +35,9 @@
     word-break: keep-all;
     padding: 0 $padding-lg;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &--active {
       color: $gray-900;
     }

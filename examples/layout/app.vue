@@ -29,6 +29,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#app {
+  overflow-y: auto;
+}
 .docs {
   .docs__header {
     height: 60px;

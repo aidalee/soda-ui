@@ -4,6 +4,7 @@ import Field, * as FieldModule from './field'
 import Icon, * as IconModule from './icon'
 import List, * as ListModule from './list'
 import ListItem, * as ListItemModule from './list-item'
+import Sticky, * as StickyModule from './sticky'
 import Tab, * as TabModule from './tab'
 import TabItem, * as TabItemModule from './tab-item'
 import Tag, * as TagModule from './tag'
@@ -14,6 +15,7 @@ import './field/style'
 import './icon/style'
 import './list/style'
 import './list-item/style'
+import './sticky/style'
 import './tab/style'
 import './tab-item/style'
 import './tag/style'
@@ -26,6 +28,7 @@ import './tag/style'
   Icon.install && app.use(Icon)
   List.install && app.use(List)
   ListItem.install && app.use(ListItem)
+  Sticky.install && app.use(Sticky)
   Tab.install && app.use(Tab)
   TabItem.install && app.use(TabItem)
   Tag.install && app.use(Tag)
@@ -39,6 +42,7 @@ export {
   Icon,
   List,
   ListItem,
+  Sticky,
   Tab,
   TabItem,
   Tag
@@ -51,6 +55,7 @@ export default {
   Icon,
   List,
   ListItem,
+  Sticky,
   Tab,
   TabItem,
   Tag

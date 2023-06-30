@@ -32,10 +32,10 @@ export default defineComponent({
       return style
     })
 
-    const renderText = () => {
-      const Text = <div>{slots.title ? slots.title() : props.title}</div>
-      return Text
-    }
+    // const renderText = () => {
+    //   const Text = <div>{slots.title ? slots.title() : props.title}</div>
+    //   return Text
+    // }
 
     const classes = computed(() => ({
       [ns.e('title')]: true,
@@ -50,7 +50,8 @@ export default defineComponent({
         style={style.value}
         class={classes.value}
       >
-        {renderText()}
+        {/* {renderText()} */}
+        {slots.title ? slots.title() : props.title}
       </div>
     )
   }
