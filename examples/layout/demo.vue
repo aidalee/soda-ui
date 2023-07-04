@@ -23,19 +23,22 @@ export default {
 .so-doc-demo__mobi {
   position: relative;
   padding-top: 200%;
-  background-color: #dedfe0;
-  background-image: url('../images/phone.png');
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  box-shadow: 2px 0px 8px #f0f1f2;
+  // background-image: url('../images/phone.png');
+  // background-position: top center;
+  // background-size: contain;
+  // background-repeat: no-repeat;
   box-sizing: border-box;
   overflow: hidden;
   .so-doc-demo__mobi__content {
+    width: 360px;
     position: absolute;
-    top: 10%;
-    left: 10%;
-    right: 10%;
-    bottom: 7%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     box-sizing: border-box;
   }
 }
@@ -43,6 +46,5 @@ iframe {
   width: 100%;
   height: 100%;
   border: 0;
-  border-radius: 0 0 9% 9%;
 }
 </style>

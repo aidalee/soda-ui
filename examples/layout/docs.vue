@@ -67,7 +67,7 @@ export default {
     top: 72px;
     right: 24px;
     z-index: 1;
-    min-width: 375px;
+    min-width: 360px;
   }
   .doc-page__example-fixed {
     position: fixed;

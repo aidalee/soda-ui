@@ -39,8 +39,4 @@
     </so-list>
   </demo-block>
 </template>
-<style lang="scss" scoped>
-.so-doc-demo-block {
-  padding: 12px 0;
-}
-</style>
+<style lang="scss" scoped></style>
