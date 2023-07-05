@@ -26,10 +26,6 @@ export default {
   background-color: #f8f9fa;
   border-radius: 20px;
   box-shadow: 2px 0px 8px #f0f1f2;
-  // background-image: url('../images/phone.png');
-  // background-position: top center;
-  // background-size: contain;
-  // background-repeat: no-repeat;
   box-sizing: border-box;
   overflow: hidden;
   .so-doc-demo__mobi__content {
