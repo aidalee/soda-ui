@@ -2,6 +2,7 @@ import Button, * as ButtonModule from './button'
 import Card, * as CardModule from './card'
 import Field, * as FieldModule from './field'
 import Icon, * as IconModule from './icon'
+import ImageUpload, * as ImageUploadModule from './image-upload'
 import List, * as ListModule from './list'
 import ListItem, * as ListItemModule from './list-item'
 import Sticky, * as StickyModule from './sticky'
@@ -13,6 +14,7 @@ export const _ButtonComponent = ButtonModule._ButtonComponent || {}
 export const _CardComponent = CardModule._CardComponent || {}
 export const _FieldComponent = FieldModule._FieldComponent || {}
 export const _IconComponent = IconModule._IconComponent || {}
+export const _ImageUploadComponent = ImageUploadModule._ImageUploadComponent || {}
 export const _ListComponent = ListModule._ListComponent || {}
 export const _ListItemComponent = ListItemModule._ListItemComponent || {}
 export const _StickyComponent = StickyModule._StickyComponent || {}
@@ -26,6 +28,7 @@ export const _TagComponent = TagModule._TagComponent || {}
   Card.install && app.use(Card)
   Field.install && app.use(Field)
   Icon.install && app.use(Icon)
+  ImageUpload.install && app.use(ImageUpload)
   List.install && app.use(List)
   ListItem.install && app.use(ListItem)
   Sticky.install && app.use(Sticky)
@@ -40,6 +43,7 @@ export {
   Card,
   Field,
   Icon,
+  ImageUpload,
   List,
   ListItem,
   Sticky,
@@ -53,6 +57,7 @@ export default {
   Card,
   Field,
   Icon,
+  ImageUpload,
   List,
   ListItem,
   Sticky,

@@ -1,0 +1,60 @@
+.so-image-upload {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  &__added-img {
+    display: inline-block;
+    font-size: 0;
+    margin: 0 15px 15px 0;
+    border-radius: 4px;
+    background-color: #f7f8fa;
+    text-align: center;
+    border: 1px solid #f00;
+    box-sizing: border-box;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+    }
+  }
+  &__add-img {
+    display: inline-block;
+    font-size: 0;
+    margin: 0 0 15px 0;
+    border-radius: 4px;
+    background-color: #f7f8fa;
+    text-align: center;
+    border: 1px solid #f00; 
+    box-sizing: border-box;
+  }
+
+  &__input {
+    position: relative;
+    text-align: center;
+    background: #f7f8fa;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0;
+    }
+    .so-icon {
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+      color: #8d8e99;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}

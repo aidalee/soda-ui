@@ -12,11 +12,14 @@ import CardPlugin, { Card } from '../packages/soda-ui/components/card'
 import TabPlugin, { Tab } from '../packages/soda-ui/components/tab'
 import TabItemPlugin, { TabItem } from '../packages/soda-ui/components/tab-item'
 import StickyPlugin, { Sticky } from '../packages/soda-ui/components/sticky'
+import ImageUploadPlugin, {
+  ImageUpload
+} from '../packages/soda-ui/components/image-upload'
 
 const version = require('../package.json').version
 
 // 2. 导出这些组件
-export { Button, List, ListItem, Tag, Card, Tab, TabItem, Sticky }
+export { Button, List, ListItem, Tag, Card, Tab, TabItem, Sticky, ImageUpload }
 
 const installs = [
   ButtonPlugin,
@@ -26,7 +29,8 @@ const installs = [
   CardPlugin,
   TabPlugin,
   TabItemPlugin,
-  StickyPlugin
+  StickyPlugin,
+  ImageUploadPlugin
 ]
 
 // 3.导出一个vue插件

@@ -45,6 +45,11 @@ const routes = [
         path: 'sticky',
         name: 'doc-sticky',
         component: () => import('./docs/components/sticky/index.md')
+      },
+      {
+        path: 'image-upload',
+        name: 'doc-image-upload',
+        component: () => import('./docs/components/image-upload/index.md')
       }
     ]
   },
@@ -87,6 +92,11 @@ const routes = [
         path: 'sticky',
         name: 'demo-sticky',
         component: () => import('./docs/components/sticky/demo.vue')
+      },
+      {
+        path: 'image-upload',
+        name: 'demo-image-upload',
+        component: () => import('./docs/components/image-upload/demo.vue')
       }
     ]
   }

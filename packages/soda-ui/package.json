@@ -31,6 +31,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@soda-f2e/icons": "workspace:^5.0.1",
     "@soda-f2e/utils": "workspace:^5.0.1",
+    "axios": "^1.4.0",
     "throttle-debounce": "^5.0.0"
   },
   "devDependencies": {

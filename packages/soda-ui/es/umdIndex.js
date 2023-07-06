@@ -2,6 +2,7 @@ import Button, * as ButtonModule from './button'
 import Card, * as CardModule from './card'
 import Field, * as FieldModule from './field'
 import Icon, * as IconModule from './icon'
+import ImageUpload, * as ImageUploadModule from './image-upload'
 import List, * as ListModule from './list'
 import ListItem, * as ListItemModule from './list-item'
 import Sticky, * as StickyModule from './sticky'
@@ -13,6 +14,7 @@ import './button/style'
 import './card/style'
 import './field/style'
 import './icon/style'
+import './image-upload/style'
 import './list/style'
 import './list-item/style'
 import './sticky/style'
@@ -26,6 +28,7 @@ import './tag/style'
   Card.install && app.use(Card)
   Field.install && app.use(Field)
   Icon.install && app.use(Icon)
+  ImageUpload.install && app.use(ImageUpload)
   List.install && app.use(List)
   ListItem.install && app.use(ListItem)
   Sticky.install && app.use(Sticky)
@@ -40,6 +43,7 @@ export {
   Card,
   Field,
   Icon,
+  ImageUpload,
   List,
   ListItem,
   Sticky,
@@ -53,6 +57,7 @@ export default {
   Card,
   Field,
   Icon,
+  ImageUpload,
   List,
   ListItem,
   Sticky,

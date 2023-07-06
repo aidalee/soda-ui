@@ -9,6 +9,7 @@
       <router-link to="/components/card"> card卡片 </router-link>
       <router-link to="/components/tab"> tab选项卡 </router-link>
       <router-link to="/components/sticky"> sticky粘性布局 </router-link>
+      <router-link to="/components/image-upload"> 图片上传 </router-link>
     </div>
     <!-- 中间文档 -->
     <div class="doc-page__content">
