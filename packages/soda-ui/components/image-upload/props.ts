@@ -16,7 +16,7 @@ export const uploadProps = {
   },
   deleteable: {
     type: Boolean,
-    default: false
+    default: true
   },
   onlyCamera: {
     type: Boolean,

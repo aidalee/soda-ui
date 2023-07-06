@@ -17,6 +17,11 @@
     display: inline-block;
   }
 }
+
+.so-icon-simple-add:before {
+  content: "\e60a";
+}
+
 .so-icon-add:before {
   content: "\e603";
 }
@@ -33,7 +38,7 @@
   content: "\e606";
 }
 
-.so-icon-clear:before {
+.so-icon-delete:before {
   content: "\e607";
 }
 

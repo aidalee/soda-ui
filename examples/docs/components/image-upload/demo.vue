@@ -1,6 +1,9 @@
 <template>
   <demo-block title="基础上传">
-    <so-image-upload v-model="state.imgList"></so-image-upload>
+    <so-image-upload
+      v-model="state.imgList"
+      @delete="handleDelete"
+    ></so-image-upload>
   </demo-block>
 </template>
 
@@ -11,8 +14,18 @@ export default {
     const state = reactive({
       imgList: []
     })
-    return { state }
+    const handleDelete = (params: { item: any; index: any }) => {
+      const { item, index } = params
+      // alert('dele')
+      state.imgList.splice(index, 1)
+    }
+    return { state, handleDelete }
   }
 }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.so-doc-demo-block {
+  background: #fff;
+  min-height: 100%;
+}
+</style>

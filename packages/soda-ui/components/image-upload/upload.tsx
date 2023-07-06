@@ -14,13 +14,9 @@ const ns = useNamespace('image-upload')
 export default defineComponent({
   name: 'SoImageUpload',
   props: uploadProps,
-  emits: ['update:modelValue'],
+  emits: ['update:modelValue', 'delete'],
   setup(props: UploadProps, { emit, slots }) {
     const input = ref<HTMLElement>()
-
-    const state = reactive({
-      imgList: []
-    })
 
     const basicStyle = computed(() => {
       const { width, height } = props
@@ -129,17 +125,38 @@ export default defineComponent({
         // onloadend：读取结束后触发，不论成功还是失败都会触发，触发时机在onload之后
       })
     }
+
+    const onDelete = (item: UploadFileListItem, index: number) => {
+      // 如果用户定义了删除 之前需要执行的方法beforeDelete
+      // 在这里先调用beforeDelete 得到相应结果之后再执行delete事件
+      emit('delete', { item, index })
+    }
+    //vue3自定义事件绑定： @delete/v-on:delete()(模板语法中) === onDelete(jsx语法中)
+    const onPreview = (item: UploadFileListItem) => {}
+
     return () => {
       return (
         <div class={ns.b()}>
           {props.modelValue.map((item, index) => {
+            console.log(item, 'item')
             return (
               <div
                 class={ns.e('added-img')}
                 style={basicStyle.value}
                 key={index}
               >
-                <img src={item.content || item.url} />
+                <img
+                  src={item.content || item.url}
+                  onClick={() => onPreview(item)}
+                />
+                {props.deleteable && item.status !== 'uploading' && (
+                  <div
+                    class={ns.e('delete')}
+                    onClick={() => onDelete(item, index)}
+                  >
+                    <so-icon name="delete" size="12"></so-icon>
+                  </div>
+                )}
               </div>
             )
           })}
@@ -163,7 +180,7 @@ export default defineComponent({
                   accept="image/*"
                   multiple
                 />
-                <so-icon name="add"></so-icon>
+                <so-icon name="simple-add"></so-icon>
               </div>
             </div>
           )}
