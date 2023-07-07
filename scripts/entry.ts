@@ -16,10 +16,27 @@ import ImageUploadPlugin, {
   ImageUpload
 } from '../packages/soda-ui/components/image-upload'
 
+import SwipePlugin, { Swipe } from '../packages/soda-ui/components/swipe'
+import SwipeItemPlugin, {
+  SwipeItem
+} from '../packages/soda-ui/components/swipe-item'
+
 const version = require('../package.json').version
 
 // 2. 导出这些组件
-export { Button, List, ListItem, Tag, Card, Tab, TabItem, Sticky, ImageUpload }
+export {
+  Button,
+  List,
+  ListItem,
+  Tag,
+  Card,
+  Tab,
+  TabItem,
+  Sticky,
+  ImageUpload,
+  Swipe,
+  SwipeItem
+}
 
 const installs = [
   ButtonPlugin,
@@ -30,7 +47,9 @@ const installs = [
   TabPlugin,
   TabItemPlugin,
   StickyPlugin,
-  ImageUploadPlugin
+  ImageUploadPlugin,
+  SwipePlugin,
+  SwipeItemPlugin
 ]
 
 // 3.导出一个vue插件

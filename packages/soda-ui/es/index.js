@@ -6,6 +6,8 @@ import ImageUpload, * as ImageUploadModule from './image-upload'
 import List, * as ListModule from './list'
 import ListItem, * as ListItemModule from './list-item'
 import Sticky, * as StickyModule from './sticky'
+import Swipe, * as SwipeModule from './swipe'
+import SwipeItem, * as SwipeItemModule from './swipe-item'
 import Tab, * as TabModule from './tab'
 import TabItem, * as TabItemModule from './tab-item'
 import Tag, * as TagModule from './tag'
@@ -18,6 +20,8 @@ export const _ImageUploadComponent = ImageUploadModule._ImageUploadComponent || 
 export const _ListComponent = ListModule._ListComponent || {}
 export const _ListItemComponent = ListItemModule._ListItemComponent || {}
 export const _StickyComponent = StickyModule._StickyComponent || {}
+export const _SwipeComponent = SwipeModule._SwipeComponent || {}
+export const _SwipeItemComponent = SwipeItemModule._SwipeItemComponent || {}
 export const _TabComponent = TabModule._TabComponent || {}
 export const _TabItemComponent = TabItemModule._TabItemComponent || {}
 export const _TagComponent = TagModule._TagComponent || {}
@@ -32,6 +36,8 @@ export const _TagComponent = TagModule._TagComponent || {}
   List.install && app.use(List)
   ListItem.install && app.use(ListItem)
   Sticky.install && app.use(Sticky)
+  Swipe.install && app.use(Swipe)
+  SwipeItem.install && app.use(SwipeItem)
   Tab.install && app.use(Tab)
   TabItem.install && app.use(TabItem)
   Tag.install && app.use(Tag)
@@ -47,6 +53,8 @@ export {
   List,
   ListItem,
   Sticky,
+  Swipe,
+  SwipeItem,
   Tab,
   TabItem,
   Tag
@@ -61,6 +69,8 @@ export default {
   List,
   ListItem,
   Sticky,
+  Swipe,
+  SwipeItem,
   Tab,
   TabItem,
   Tag

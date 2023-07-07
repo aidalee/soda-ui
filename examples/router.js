@@ -50,6 +50,11 @@ const routes = [
         path: 'image-upload',
         name: 'doc-image-upload',
         component: () => import('./docs/components/image-upload/index.md')
+      },
+      {
+        path: 'swipe',
+        name: 'doc-swipe',
+        component: () => import('./docs/components/swipe/index.md')
       }
     ]
   },
@@ -97,6 +102,11 @@ const routes = [
         path: 'image-upload',
         name: 'demo-image-upload',
         component: () => import('./docs/components/image-upload/demo.vue')
+      },
+      {
+        path: 'swipe',
+        name: 'demo-swipe',
+        component: () => import('./docs/components/swipe/demo.vue')
       }
     ]
   }

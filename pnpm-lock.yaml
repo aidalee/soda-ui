@@ -83,12 +83,6 @@ importers:
       vitest: 0.24.1_m3o4cqqqy3oqqeduvg7f3naalm
       vue-tsc: 0.39.5_typescript@4.8.4
 
-  examples:
-    specifiers:
-      '@soda-f2e/ui': ^5.0.1
-    dependencies:
-      '@soda-f2e/ui': link:../packages/soda-ui
-
   packages/soda-cli:
     specifiers:
       '@babel/cli': ^7.19.3
